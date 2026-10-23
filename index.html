@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Youssef Ben Mbarek · 贝苏宇 — Engineering Portfolio</title>
+<meta name="description" content="Engineering portfolio of Youssef Ben Mbarek (贝苏宇): Electrical Engineering, AI and Embedded Systems. AntRoute, a smart assistance system for Alzheimer's patients, and AXIS industrial vision.">
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3f0e9" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Youssef Ben Mbarek · 贝苏宇 — Engineering Portfolio">
+<meta property="og:description" content="Electrical Engineering · AI · Embedded Systems">
+<meta property="og:image" content="assets/img/podium-600.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/notoserifsc-sub.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  (function () {
+    var d = document.documentElement, t = null;
+    d.classList.remove('no-js'); d.classList.add('js');
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    d.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Back to top">
+      <span class="nav__mark">YBM</span><span class="nav__cn zh">贝苏宇</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work"><span class="zh">项目</span> Work</a>
+      <a href="#experience"><span class="zh">经历</span> Experience</a>
+      <a href="#skills"><span class="zh">技能</span> Skills</a>
+      <a href="#contact"><span class="zh">联系</span> Contact</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="icon-btn" id="printBtn" type="button" aria-label="Save as PDF" title="Save as PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Toggle dark / light theme" title="Toggle theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav__progress" aria-hidden="true"><span id="progress"></span></div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Introduction">
+  <canvas class="hero__field" id="field" aria-hidden="true"></canvas>
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="kicker hero__kicker reveal"><span class="dot"></span><span class="zh">工程作品集</span> · Engineering Portfolio · 2026</p>
+      <h1 class="hero__name" aria-label="Youssef Ben Mbarek">
+        <span class="line"><span class="word">Youssef</span></span>
+        <span class="line"><span class="word">Ben&nbsp;Mbarek</span></span>
+      </h1>
+      <p class="hero__disciplines reveal">
+        <span>Electrical Engineering</span><i>·</i><span>AI</span><i>·</i><span>Embedded Systems</span>
+      </p>
+      <p class="hero__lede reveal">
+        Electrical engineering student at ENSIT, Tunis, spending 2026–27 at Changzhou Vocational Institute of Mechatronic Technology in China.
+        I build embedded hardware, computer vision and the software around them: from hand-soldered sensors to live dashboards.
+      </p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--solid" href="#work">See the projects
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <figure class="badge reveal" aria-label="Portrait of Youssef Ben Mbarek">
+      <div class="badge__ticks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="badge__photo">
+        <img src="assets/img/portrait-448.webp" width="448" height="448" alt="Youssef Ben Mbarek" fetchpriority="high">
+      </div>
+      <figcaption class="badge__meta">
+        <span class="badge__cn zh">贝苏宇</span>
+        <span class="mono">Youssef Ben Mbarek</span>
+        <span class="mono dim">ENSIT · Tunis → Changzhou</span>
+      </figcaption>
+      <span class="badge__vertical zh" aria-hidden="true">贝苏宇</span>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <ul class="hero__stats">
+      <li class="reveal">
+        <span class="stat__value">1<sup>st</sup></span>
+        <span class="stat__label">Place, IEEE RAS &amp; VTS SmartFleet Challenge, TSYP 13</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value"><span data-count="93">93</span>%</span>
+        <span class="stat__label">Held-out accuracy, AXIS shield inspector at Sagemcom</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value"><span data-count="87.3" data-decimals="1">87.3</span>%</span>
+        <span class="stat__label">On-time delivery with no central controller, AntRoute</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value">2</span>
+        <span class="stat__label">Working wearables: AR glasses + MEMO-BAND health bracelet</span>
+      </li>
+    </ul>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>ESP32</span><span>C++ firmware</span><span>PyTorch</span><span>OpenCV</span><span>Siemens S7-1200</span><span>Snap7</span><span>FastAPI</span><span>WebSockets</span><span>React</span><span>Node.js</span><span>I2C sensors</span><span>ResNet-18</span><span>MobileNetV2</span><span>TIA Portal</span><span>Capacitor</span><span>3D printing</span>
+      <span>ESP32</span><span>C++ firmware</span><span>PyTorch</span><span>OpenCV</span><span>Siemens S7-1200</span><span>Snap7</span><span>FastAPI</span><span>WebSockets</span><span>React</span><span>Node.js</span><span>I2C sensors</span><span>ResNet-18</span><span>MobileNetV2</span><span>TIA Portal</span><span>Capacitor</span><span>3D printing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT INDEX ============ -->
+<section class="index" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Selected work</p>
+      <h2 class="sec-title zh" id="work-title">精选项目</h2>
+    </header>
+    <ol class="index__list">
+      <li class="reveal" style="--pa: var(--c-amber)">
+        <a href="#antroute" data-preview="assets/img/podium-600.webp">
+          <span class="index__num">01</span>
+          <span class="index__name">AntRoute<small class="zh">去中心化多机器人配送车队</small></span>
+          <span class="index__desc">Decentralized fleet coordination · 1st Place, TSYP 13</span>
+          <span class="index__year">2025</span>
+        </a>
+      </li>
+      <li class="reveal" style="--pa: var(--c-green)">
+        <a href="#memo" data-preview="assets/img/glasses-hand-600.webp">
+          <span class="index__num">02</span>
+          <span class="index__name">MEMO-BAND System<small class="zh">阿尔茨海默症患者智能辅助系统</small></span>
+          <span class="index__desc">AR glasses · health bracelet · backend · caregiver app</span>
+          <span class="index__year">2026</span>
+        </a>
+      </li>
+      <li class="reveal" style="--pa: var(--c-cyan)">
+        <a href="#axis" data-preview="assets/img/axis-loose-800.webp">
+          <span class="index__num">03</span>
+          <span class="index__name">AXIS<small class="zh">工业视觉检测与监控系统</small></span>
+          <span class="index__desc">Industrial vision &amp; PLC supervision · Sagemcom</span>
+          <span class="index__year">2026</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div class="index__preview" aria-hidden="true"><img alt="" id="indexPreview"></div>
+</section>
+
+<!-- ============ PROJECT 01 · ANTROUTE ============ -->
+<article class="project" id="antroute" style="--pa: var(--c-amber); --pa-soft: var(--c-amber-soft)" aria-labelledby="ar-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">01</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">Project 01 · TSYP 13 · 2025</p>
+        <h2 class="p-title zh reveal" id="ar-title"><span class="nw">去中心化多机器人</span><span class="nw">配送车队</span></h2>
+        <p class="p-name reveal">AntRoute</p>
+        <p class="p-sub reveal">Decentralized multi-agent fleet coordination with bio-inspired pheromone mapping and fairness-aware auctions.</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4.5a3 3 0 0 0 3.6 4M16 6h3.5a3 3 0 0 1-3.6 4M12 13v4M8.5 20h7M10 17h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            1st Place · IEEE RAS &amp; VTS SmartFleet Challenge
+          </li>
+          <li>Team of 2</li>
+          <li>Simulation + hardware prototype</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ar-problem">
+        <h3 class="block__title" id="ar-problem"><span class="zh">问题</span><span class="kicker">The problem</span></h3>
+        <p class="big">Last-mile delivery accounts for <strong>more than half</strong> of total shipping cost.</p>
+        <p>Autonomous fleets can help, but most fleet systems use one central controller. If that controller fails, the whole fleet stops, and it becomes a communication bottleneck as the fleet grows. Many decentralized methods only optimize speed: some vehicles get overloaded while others sit idle, and outer neighborhoods get worse service.</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ar-solution">
+        <h3 class="block__title" id="ar-solution"><span class="zh">方案</span><span class="kicker">What we built</span></h3>
+        <p>AntRoute is a decentralized coordination system for mixed fleets of <strong>trucks, ground robots and drones</strong>. Vehicles communicate only with nearby vehicles and decide among themselves who handles each delivery.</p>
+        <ul class="specs">
+          <li><b>500 m</b><span>neighbour radio range</span></li>
+          <li><b>2 s</b><span>message interval</span></li>
+          <li><b>~6 s</b><span>to detect a failed vehicle</span></li>
+          <li><b>30 s</b><span>route replanning cycle</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- three ideas -->
+    <section class="ideas" aria-labelledby="ar-ideas">
+      <h3 class="block__title reveal" id="ar-ideas"><span class="zh">核心思路</span><span class="kicker">Three ideas</span></h3>
+      <div class="ideas__grid">
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="24" r="11" opacity=".55"/><circle cx="24" cy="24" r="18" opacity=".25"/></g><g fill="currentColor"><circle cx="9" cy="12" r="1.6"/><circle cx="38" cy="10" r="1.6"/><circle cx="40" cy="36" r="1.6"/></g></svg>
+          <p class="card__k">01 · <span class="zh">数字信息素</span></p>
+          <h4>Digital pheromone mapping</h4>
+          <p>Each vehicle keeps a local map of delivery demand, congestion and priority, updated through decay, diffusion and exchanges with neighbours. Unlike classic Ant Colony Optimization, pheromone builds up where <em>new</em> requests are likely to appear, so the fleet positions itself before demand arrives.</p>
+        </div>
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 38h32"/><path d="M13 38V26M24 38V14M35 38V21"/><path d="M20 10l4-4 4 4" /></g></svg>
+          <p class="card__k">02 · <span class="zh">公平性拍卖</span></p>
+          <h4>Fairness-aware auctions</h4>
+          <p>Vehicles bid on each task with a score weighing travel time, battery cost and fairness: how much work the vehicle has already done and how well the destination area has been served. Emergency medical deliveries skip the fairness rules and are assigned immediately.</p>
+        </div>
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="24" r="4" stroke-dasharray="2 2"/><circle cx="34" cy="14" r="4"/><circle cx="34" cy="34" r="4"/><path d="M16 22l14-6M16 26l14 6M34 18v12"/></g></svg>
+          <p class="card__k">03 · <span class="zh">协同故障恢复</span></p>
+          <h4>Collaborative failure recovery</h4>
+          <p>Neighbours detect a failed vehicle within about 6 seconds when its status messages stop, then run an emergency auction for its tasks. When 3 or more tasks are left without a vehicle, the fleet sets up a <em>virtual swap station</em> at a meeting point to hand packages over.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- architecture -->
+    <section class="arch reveal" aria-labelledby="ar-arch">
+      <h3 class="block__title" id="ar-arch"><span class="zh">系统架构</span><span class="kicker">Each vehicle runs four layers at the same time</span></h3>
+      <ol class="layers">
+        <li><span class="layers__i">L1</span><span class="layers__n">Pheromone mapping</span><span class="layers__d">decay · diffusion · neighbour exchange</span></li>
+        <li><span class="layers__i">L2</span><span class="layers__n">Auction-based task allocation</span><span class="layers__d">time · battery · fairness score</span></li>
+        <li><span class="layers__i">L3</span><span class="layers__n">Adaptive routing</span><span class="layers__d">modified A* weighted by pheromone &amp; congestion, replanned every 30 s</span></li>
+        <li><span class="layers__i">L4</span><span class="layers__n">Resilience monitoring</span><span class="layers__d">heartbeat loss → emergency auction</span></li>
+      </ol>
+    </section>
+
+    <!-- sim to real -->
+    <section class="s2r-wrap" aria-labelledby="ar-s2r">
+      <h3 class="block__title reveal" id="ar-s2r"><span class="zh">从仿真到现实</span><span class="kicker">Sim-to-real · three videos</span></h3>
+      <div class="s2r reveal" id="s2r" data-mode="single" data-active="sim">
+        <div class="s2r__bar">
+          <div class="seg" role="tablist" aria-label="Choose a video">
+            <span class="seg__thumb" aria-hidden="true"></span>
+            <button role="tab" id="tab-sim" aria-controls="clip-sim" aria-selected="true" data-v="sim"><i>01</i> Simulation</button>
+            <button role="tab" id="tab-real" aria-controls="clip-real" aria-selected="false" tabindex="-1" data-v="real"><i>02</i> Real world</button>
+            <button role="tab" id="tab-twin" aria-controls="clip-twin" aria-selected="false" tabindex="-1" data-v="twin"><i>03</i> Digital twin</button>
+          </div>
+          <div class="s2r__tools">
+            <button class="chip" id="s2rMode" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7v14H3zM14 5h7v6h-7zM14 13h7v6h-7z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              Compare all three
+            </button>
+            <button class="chip chip--icon" id="s2rPlay" type="button" aria-label="Pause videos">
+              <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+              <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="s2r__stage">
+          <figure class="clip" id="clip-sim" role="tabpanel" aria-labelledby="tab-sim" data-v="sim">
+            <div class="clip__media">
+              <img class="clip__bg" src="assets/video/sim-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="assets/video/sim-poster.webp" width="1280" height="548" aria-label="Simulation demo of the AntRoute fleet">
+                <source src="assets/video/sim.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>Simulation</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>Web simulator.</b> The fleet on a city grid, live: auctions, pheromone trails, A* paths, failure injection and performance metrics. Built with React and HTML5 Canvas.
+            </figcaption>
+          </figure>
+          <figure class="clip" id="clip-real" role="tabpanel" aria-labelledby="tab-real" data-v="real">
+            <div class="clip__media clip__media--tall">
+              <img class="clip__bg" src="assets/video/real-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="assets/video/real-poster.webp" width="540" height="960" aria-label="The two ESP32 robots working on the floor">
+                <source src="assets/video/real.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>Real world</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>The real robots.</b> Two ESP32 robots with two DC motors each. Each robot computes its own bid from distance and energy, wins tasks over WiFi, then drives to the pickup and drop-off points.
+            </figcaption>
+          </figure>
+          <figure class="clip" id="clip-twin" role="tabpanel" aria-labelledby="tab-twin" data-v="twin">
+            <div class="clip__media">
+              <img class="clip__bg" src="assets/video/twin-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="assets/video/twin-poster.webp" width="1280" height="720" aria-label="Digital twin of the real two-robot setup">
+                <source src="assets/video/twin.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>Digital twin</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>Digital twin.</b> The real setup mirrored in software: each robot streams its wheel-odometry position, energy level and pheromone data through the Node.js WebSocket server, which starts each auction and relays messages between robots.
+            </figcaption>
+          </figure>
+        </div>
+        <ol class="s2r__flow" aria-label="From simulation to real world">
+          <li><b>Simulate</b> 9 vehicles, 120 tasks, 2 × 2 km grid</li>
+          <li><b>Build</b> 2 ESP32 robots running C++ firmware</li>
+          <li><b>Mirror</b> live positions, energy and auctions</li>
+        </ol>
+      </div>
+      <!-- print-only stills -->
+      <div class="print-only print-stills">
+        <img src="assets/video/sim-poster.webp" alt="Simulation still">
+        <img src="assets/video/real-poster.webp" alt="Real robots still">
+        <img src="assets/video/twin-poster.webp" alt="Digital twin still">
+      </div>
+    </section>
+
+    <!-- results -->
+    <section class="results" aria-labelledby="ar-results">
+      <h3 class="block__title reveal" id="ar-results"><span class="zh">实验结果</span><span class="kicker">Result · Python discrete-event simulation</span></h3>
+      <p class="results__setup reveal">2 × 2 km urban grid · 9 vehicles (2 trucks, 5 ground robots, 2 drones) · 120 delivery tasks over 2 hours · 20 independent runs per scenario. Compared against a greedy nearest-vehicle method and a centralized optimal method (Hungarian algorithm).</p>
+      <div class="bars reveal" id="bars">
+        <div class="bars__legend" aria-hidden="true">
+          <span class="lg lg--a">AntRoute</span><span class="lg lg--g">Greedy</span><span class="lg lg--c">Centralized optimal</span>
+        </div>
+        <div class="metric" data-max="100">
+          <p class="metric__name">On-time delivery <span>higher is better</span></p>
+          <div class="bar bar--a" style="--v:87.3"><span>87.3%</span></div>
+          <div class="bar bar--g" style="--v:71.8"><span>71.8%</span></div>
+          <div class="bar bar--c" style="--v:91.6"><span>91.6%</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">On-time delivery during demand spike <span>higher is better</span></p>
+          <div class="bar bar--a" style="--v:83.9"><span>83.9%</span></div>
+          <div class="bar bar--g" style="--v:53.7"><span>53.7%</span></div>
+          <div class="bar bar--c" style="--v:88.2"><span>88.2%</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">Workload fairness, Gini <span>lower is better</span></p>
+          <div class="bar bar--a" style="--v:46"><span>0.23</span></div>
+          <div class="bar bar--g" style="--v:90"><span>0.45</span></div>
+          <div class="bar bar--c" style="--v:36"><span>0.18</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">Distance per package <span>lower is better</span></p>
+          <div class="bar bar--a" style="--v:61.7"><span>2.11 km</span></div>
+          <div class="bar bar--g" style="--v:100"><span>3.42 km</span></div>
+          <div class="bar bar--c" style="--v:56.7"><span>1.94 km</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">Task recovery after failures <span>higher is better</span></p>
+          <div class="bar bar--a" style="--v:93.3"><span>93.3%</span></div>
+          <div class="bar bar--g" style="--v:0.6"><span>0%</span></div>
+          <div class="bar bar--c bar--na" style="--v:0"><span>n/a</span></div>
+        </div>
+      </div>
+      <ul class="kpis">
+        <li class="reveal"><b><span data-count="29.4" data-decimals="1">29.4</span>%</b><span>lower CO₂ emissions than the greedy baseline</span></li>
+        <li class="reveal"><b>28.9 → <span data-count="12.7" data-decimals="1">12.7</span>%</b><span>empty travel, cut by more than half</span></li>
+        <li class="reveal"><b><span data-count="4.7" data-decimals="1">4.7</span> min</b><span>to full recovery after two trucks failed at the same time</span></li>
+      </ul>
+    </section>
+
+    <div class="p-grid p-grid--media">
+      <section class="block reveal" aria-labelledby="ar-hw">
+        <h3 class="block__title" id="ar-hw"><span class="zh">硬件原型</span><span class="kicker">Hardware prototype</span></h3>
+        <p>To test the idea beyond simulation we built two small 3D-printed robots on wheels:</p>
+        <ul class="ticks">
+          <li>Each robot: an <strong>ESP32</strong>, two DC motors and a motor driver, running C++ firmware written with Arduino.</li>
+          <li>Robots connect over WiFi to a <strong>Node.js WebSocket server</strong> that starts each auction and relays messages between robots.</li>
+          <li>Each robot calculates its own bid from its distance and energy level, drives to pickup and drop-off, estimates its position from wheel speeds and streams position, energy and pheromone data in real time.</li>
+          <li>A <strong>React + HTML5 Canvas</strong> web simulator shows the fleet live, including auctions, pheromone trails, A* paths, failure injection and live metrics.</li>
+        </ul>
+        <h3 class="block__title block__title--sm"><span class="zh">技术栈</span><span class="kicker">Tech</span></h3>
+        <ul class="tags">
+          <li>C++ (Arduino)</li><li>ESP32</li><li>WiFi</li><li>WebSocket</li><li>Node.js</li><li>React</li><li>Tailwind CSS</li><li>HTML5 Canvas</li><li>Vite</li><li>Python</li>
+        </ul>
+        <h3 class="block__title block__title--sm"><span class="zh">后续工作</span><span class="kicker">Future work</span></h3>
+        <ul class="ticks ticks--dim">
+          <li>Learn auction weights and pheromone settings automatically with reinforcement learning</li>
+          <li>Coordinate fleets across several cities, with human drivers alongside autonomous vehicles</li>
+          <li>Full-scale tests: a 5 × 5 km area, 35 vehicles, 8 hours</li>
+        </ul>
+      </section>
+      <figure class="podium reveal">
+        <button class="zoomable" type="button" data-full="assets/img/podium-1100.webp" data-caption="Winners announcement, IEEE RAS / VTS SmartFleet Challenge, TSYP 13" aria-label="Enlarge podium photo">
+          <img src="assets/img/podium-600.webp" srcset="assets/img/podium-600.webp 600w, assets/img/podium-1100.webp 1100w" sizes="(max-width: 860px) 90vw, 400px" width="600" height="1066" loading="lazy" decoding="async" alt="Team AntRoute on stage at the RAS / VTS Challenge winner announcement, TSYP 13">
+        </button>
+        <figcaption><span class="zh">冠军</span> · Winners announcement, RAS / VTS Challenge, TSYP 13 (Tunisian Students and Young Professionals Congress)</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PROJECT 02 · MEMO-BAND / ALZHEIMER ============ -->
+<article class="project" id="memo" style="--pa: var(--c-green); --pa-soft: var(--c-green-soft)" aria-labelledby="mb-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">02</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">Project 02 · IoT · Health · 2026</p>
+        <h2 class="p-title zh reveal" id="mb-title"><span class="nw">阿尔茨海默症患者</span><span class="nw">智能辅助系统</span></h2>
+        <p class="p-name reveal">Smart Assistance System <span class="p-name__amp">for</span> Alzheimer’s Patients</p>
+        <p class="p-sub reveal">AR smart glasses, the MEMO-BAND health bracelet, a backend server and a caregiver mobile app. Hardware, firmware, backend and app, built end to end.</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Working prototypes
+          </li>
+          <li>Academic prototype → startup product in development</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="mb-problem">
+        <h3 class="block__title" id="mb-problem"><span class="zh">问题</span><span class="kicker">The problem</span></h3>
+        <p class="big">Help people with Alzheimer’s live <strong>more safely and independently</strong>, while family follows their condition in real time.</p>
+        <p>The patient needs help remembering who they are talking to and where they are, and someone needs to know immediately when they fall, their vital signs drift or they leave a safe area.</p>
+      </section>
+      <section class="block reveal" aria-labelledby="mb-built">
+        <h3 class="block__title" id="mb-built"><span class="zh">方案</span><span class="kicker">What I built</span></h3>
+        <p>An IoT system with four parts that talk over Wi-Fi. The glasses tell the patient who is in front of them; the bracelet watches vital signs and falls on-device; the backend does the recognition; the app puts it all in a caregiver’s pocket.</p>
+        <p class="hint">Select a part of the system to explore it.</p>
+      </section>
+    </div>
+
+    <!-- interactive system map -->
+    <section class="sysmap reveal" aria-labelledby="mb-map">
+      <h3 class="block__title" id="mb-map"><span class="zh">系统组成</span><span class="kicker">System · four parts</span></h3>
+      <div class="sysmap__diagram" role="tablist" aria-label="System parts">
+        <svg class="sysmap__wires" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+          <path class="wire" data-a="glasses" d="M250 75 C 340 75, 340 150, 420 150"/>
+          <path class="wire" data-a="band" d="M250 225 C 340 225, 340 150, 420 150"/>
+          <path class="wire" data-a="app" d="M580 150 L 750 150"/>
+        </svg>
+        <button class="node node--glasses" role="tab" id="t-glasses" aria-controls="p-glasses" aria-selected="true" data-node="glasses">
+          <span class="node__k">01 · <span class="zh">AR 眼镜</span></span><span class="node__n">AR smart glasses</span><span class="node__d">ESP32-S3 Sense · camera · OLED HUD</span>
+          <span class="node__wire">camera frames ⇄ name + relation</span>
+        </button>
+        <button class="node node--band" role="tab" id="t-band" aria-controls="p-band" aria-selected="false" tabindex="-1" data-node="band">
+          <span class="node__k">02 · <span class="zh">健康手环</span></span><span class="node__n">MEMO-BAND bracelet</span><span class="node__d">ESP32-C3 · MAX30102 · MAX30205 · MPU6050</span>
+          <span class="node__wire">JSON over HTTP POST</span>
+        </button>
+        <button class="node node--backend" role="tab" id="t-backend" aria-controls="p-backend" aria-selected="false" tabindex="-1" data-node="backend">
+          <span class="node__k">03 · <span class="zh">后端</span></span><span class="node__n">Backend server</span><span class="node__d">Python · Flask · OpenCV</span>
+        </button>
+        <button class="node node--app" role="tab" id="t-app" aria-controls="p-app" aria-selected="false" tabindex="-1" data-node="app">
+          <span class="node__k">04 · <span class="zh">家属端</span></span><span class="node__n">Caregiver app</span><span class="node__d">React · TypeScript · Capacitor</span>
+          <span class="node__wire">REST API · MJPEG</span>
+        </button>
+      </div>
+
+      <div class="sysmap__panels">
+        <!-- glasses -->
+        <div class="panel" id="p-glasses" role="tabpanel" aria-labelledby="t-glasses">
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title"><span class="zh">AR 智能眼镜</span> AR smart glasses</h4>
+              <dl class="kv">
+                <dt>Board</dt><dd>Seeed XIAO ESP32-S3 Sense with camera</dd>
+                <dt>Display</dt><dd>128×32 OLED, SSD1306 over I2C</dd>
+                <dt>Optics</dt><dd>a mirror and a transparent glass</dd>
+                <dt>Case</dt><dd>3D-printed, designed by me</dd>
+              </dl>
+              <p><strong>How the AR display works.</strong> The mirror reflects the text from the OLED onto the transparent glass, so the patient sees the information on top of the real world, like a simple head-up display.</p>
+              <p><strong>Face recognition.</strong> The camera sends images over Wi-Fi to the backend, which recognizes family members and friends. The glasses then show the person’s name and relation, so the patient remembers who they are talking to.</p>
+              <p><strong>Room recognition.</strong> The backend also recognizes which room the patient is in, for example the kitchen: visual indoor localization, called vSLAM in the project.</p>
+            </div>
+            <div class="optics">
+              <svg viewBox="0 0 320 220" class="optics__svg" role="img" aria-label="Optical path: OLED text reflects off a mirror onto a transparent glass in front of the eye, overlaid on the real world">
+                <defs>
+                  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+                </defs>
+                <g class="optics__world">
+                  <path d="M20 150 H 170" marker-end="url(#arrow)"/>
+                  <path d="M20 175 H 170" marker-end="url(#arrow)"/>
+                  <text x="20" y="200">real world</text>
+                </g>
+                <rect class="optics__oled" x="160" y="22" width="70" height="18" rx="2"/>
+                <text class="optics__lbl" x="238" y="35">OLED</text>
+                <line class="optics__mirror" x1="178" y1="70" x2="222" y2="100"/>
+                <text class="optics__lbl" x="232" y="92">mirror</text>
+                <line class="optics__glass" x1="190" y1="128" x2="212" y2="198"/>
+                <text class="optics__lbl" x="128" y="122">glass</text>
+                <path class="optics__ray" d="M195 40 V 82 L 202 162" marker-end="url(#arrow)"/>
+                <path class="optics__ray optics__ray--eye" d="M204 165 H 262" marker-end="url(#arrow)"/>
+                <circle class="optics__eye" cx="282" cy="165" r="14"/><circle cx="276" cy="165" r="5" class="optics__pupil"/>
+                <text class="optics__lbl" x="266" y="198">eye</text>
+              </svg>
+              <div class="oled" aria-label="Example of what the glasses display">
+                <span class="oled__screen"><span class="oled__text" id="oledText">Youssef – Son</span><span class="oled__cursor"></span></span>
+                <span class="oled__cap mono">128 × 32 OLED · example output</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- band -->
+        <div class="panel" id="p-band" role="tabpanel" aria-labelledby="t-band" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title"><span class="zh">MEMO-BAND 健康手环</span> Smart health bracelet</h4>
+              <dl class="kv">
+                <dt>Board</dt><dd>Seeed XIAO ESP32-C3</dd>
+                <dt>Heart / SpO₂</dt><dd>MAX30102</dd>
+                <dt>Temperature</dt><dd>MAX30205</dd>
+                <dt>Motion</dt><dd>MPU6050 accelerometer + gyroscope</dd>
+                <dt>Bus</dt><dd>all sensors on I2C, soldered by hand</dd>
+                <dt>Enclosure</dt><dd>a commercial smartwatch, original electronics removed, my board and sensors fitted inside its case and strap; USB-C for programming and power</dd>
+              </dl>
+              <p><strong>Firmware.</strong> Modular C++ (Arduino) split into sensor, alert engine, sleep manager and Wi-Fi manager modules.</p>
+              <p><strong>Power.</strong> Deep-sleep cycles: cardio check every 30 s, temperature every 5 min, and wake-up on motion through the MPU6050 interrupt.</p>
+              <p><strong>Link.</strong> Sends data as JSON over Wi-Fi with HTTP POST to the backend.</p>
+            </div>
+            <div>
+              <p class="kicker">On-device alert engine</p>
+              <table class="alerts">
+                <caption class="sr-only">Alert thresholds detected on the bracelet</caption>
+                <tbody>
+                  <tr><th scope="row">Fall</th><td><b>&gt; 2.5 g</b> acceleration</td></tr>
+                  <tr><th scope="row">Bradycardia</th><td><b>&lt; 50</b> BPM</td></tr>
+                  <tr><th scope="row">Tachycardia</th><td><b>&gt; 120</b> BPM</td></tr>
+                  <tr><th scope="row">Low SpO₂</th><td><b>&lt; 94</b> %</td></tr>
+                  <tr><th scope="row">Fever</th><td><b>&gt; 37.8</b> °C</td></tr>
+                  <tr><th scope="row">Hypothermia</th><td><b>&lt; 35</b> °C</td></tr>
+                  <tr><th scope="row">Agitation</th><td>high gyroscope activity</td></tr>
+                  <tr class="crit"><th scope="row">Critical</th><td>fall <b>+</b> tachycardia together</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- backend -->
+        <div class="panel" id="p-backend" role="tabpanel" aria-labelledby="t-backend" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title"><span class="zh">后端服务器</span> Backend server</h4>
+              <p><strong>Stack.</strong> Python with Flask and OpenCV.</p>
+              <p><strong>Face recognition.</strong> Haar Cascade for detection and LBPH for recognition, with data augmentation to improve accuracy. Endpoints to enroll, recognize, list and delete faces.</p>
+              <p><strong>Room recognition.</strong> MobileNetV2 (ONNX) extracts image features and an SVM classifier (scikit-learn), trained on photos of each room, identifies the room. YOLOv4-tiny for object detection.</p>
+              <p><strong>Also.</strong> Live MJPEG streaming from the glasses’ camera; receives the bracelet data and serves it to the app through a REST API.</p>
+            </div>
+            <div class="pipe" aria-label="Recognition pipelines">
+              <div class="pipe__row"><span>camera frame</span><i></i><span>Haar Cascade</span><i></i><span>LBPH</span><i></i><span class="pipe__out">name + relation</span></div>
+              <div class="pipe__row"><span>camera frame</span><i></i><span>MobileNetV2 · ONNX</span><i></i><span>SVM</span><i></i><span class="pipe__out">room</span></div>
+              <div class="pipe__row"><span>bracelet JSON</span><i></i><span>Flask</span><i></i><span>REST API</span><i></i><span class="pipe__out">app</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- app -->
+        <div class="panel" id="p-app" role="tabpanel" aria-labelledby="t-app" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title"><span class="zh">家属端应用</span> Caregiver mobile app</h4>
+              <p><strong>Stack.</strong> React, TypeScript and Tailwind CSS, packaged as an Android / iOS app with Capacitor.</p>
+              <ul class="ticks">
+                <li><b>Live dashboard:</b> heart rate, SpO₂, temperature, activity, the patient’s current room and the battery of both devices.</li>
+                <li><b>Real-time alerts:</b> falls, abnormal vital signs, leaving the safe zone, low battery, with severity levels and acknowledgement.</li>
+                <li><b>Safe zone:</b> a geofence on a map with an adjustable radius.</li>
+                <li><b>History:</b> charts of heart rate, activity and falls.</li>
+                <li><b>Family members:</b> manage the faces the glasses should recognize.</li>
+                <li><b>Patient profile:</b> emergency contacts and medical notes.</li>
+              </ul>
+            </div>
+            <div class="phones" aria-hidden="true">
+              <img src="assets/img/app-vitals-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="">
+              <img src="assets/img/app-alerts-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="gallery" aria-labelledby="mb-gal">
+      <div class="gallery__head reveal">
+        <h3 class="block__title" id="mb-gal"><span class="zh">作品图集</span><span class="kicker">MEMO-BAND gallery</span></h3>
+        <div class="filters" role="group" aria-label="Filter gallery">
+          <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="glasses" aria-pressed="false">AR glasses</button>
+          <button class="chip" data-filter="band" aria-pressed="false">Bracelet</button>
+          <button class="chip" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="chip" data-filter="app" aria-pressed="false">Family app</button>
+        </div>
+      </div>
+      <ul class="gal" id="gal">
+        <li class="gal__item gal__item--tall reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="assets/img/glasses-hand-1200.webp" data-caption="AR glasses prototype: XIAO ESP32-S3 Sense, OLED and optics in the 3D-printed case">
+            <img src="assets/img/glasses-hand-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="AR glasses prototype held in hand, with the OLED lit inside the 3D-printed case">
+            <span class="gal__cap"><b>AR glasses</b> prototype in hand</span>
+          </button>
+        </li>
+        <li class="gal__item reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="assets/img/glasses-open-372.webp" data-caption="Open case: OLED, mirror and transparent glass">
+            <img src="assets/img/glasses-open-372.webp" width="372" height="327" loading="lazy" decoding="async" alt="Opened AR glasses case showing the OLED, mirror and transparent glass">
+            <span class="gal__cap"><b>AR glasses</b> optics: OLED, mirror, glass</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="assets/img/glasses-side-940.webp" data-caption="Side view of the glasses with the camera">
+            <img src="assets/img/glasses-side-600.webp" width="600" height="1226" loading="lazy" decoding="async" alt="Side view of the AR glasses showing the camera">
+            <span class="gal__cap"><b>AR glasses</b> camera side</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="assets/img/band-worn-1200.webp" data-caption="MEMO-BAND worn on the wrist">
+            <img src="assets/img/band-worn-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="MEMO-BAND bracelet worn on a wrist">
+            <span class="gal__cap"><b>MEMO-BAND</b> worn</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="assets/img/band-internals-1200.webp" data-caption="Hand-soldered I2C sensor boards fitted into the reused smartwatch strap">
+            <img src="assets/img/band-internals-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="Opened bracelet showing hand-soldered sensor boards and wiring inside a smartwatch strap">
+            <span class="gal__cap"><b>MEMO-BAND</b> hand-soldered sensors inside</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="assets/img/band-usbc-1200.webp" data-caption="ESP32-C3 USB-C port for programming and power">
+            <img src="assets/img/band-usbc-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="Bracelet with the ESP32-C3 USB-C port visible">
+            <span class="gal__cap"><b>MEMO-BAND</b> USB-C for programming &amp; power</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--diagram reveal" data-cat="backend">
+          <div class="bk">
+            <p class="kicker">Backend · Flask + OpenCV</p>
+            <ul class="bk__list">
+              <li><span class="bk__ep">POST</span> enroll face</li>
+              <li><span class="bk__ep">POST</span> recognize face</li>
+              <li><span class="bk__ep">GET</span> list faces</li>
+              <li><span class="bk__ep">DEL</span> delete face</li>
+              <li><span class="bk__ep">MJPEG</span> live glasses camera</li>
+              <li><span class="bk__ep">REST</span> bracelet data → app</li>
+            </ul>
+            <p class="bk__model">Haar + LBPH · MobileNetV2 (ONNX) + SVM · YOLOv4-tiny</p>
+          </div>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app backend">
+          <button class="zoomable" type="button" data-full="assets/img/app-location-720.webp" data-caption="Room recognition from the backend shown in the app (current position: kitchen), with both devices’ battery levels">
+            <img src="assets/img/app-location-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App screen showing current room recognized as the kitchen and device battery levels">
+            <span class="gal__cap"><b>Room recognition</b> result in the app</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app">
+          <button class="zoomable" type="button" data-full="assets/img/app-vitals-720.webp" data-caption="Live dashboard: heart rate, SpO₂, temperature, activity, with a hypothermia alert from the bracelet">
+            <img src="assets/img/app-vitals-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App dashboard with heart rate, SpO2, temperature and a hypothermia alert">
+            <span class="gal__cap"><b>Family app</b> live vitals</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app">
+          <button class="zoomable" type="button" data-full="assets/img/app-alerts-720.webp" data-caption="Alerts with severity and acknowledgement">
+            <img src="assets/img/app-alerts-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App alerts screen listing temperature alerts with acknowledge buttons">
+            <span class="gal__cap"><b>Family app</b> alerts</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app backend">
+          <button class="zoomable" type="button" data-full="assets/img/app-family-720.webp" data-caption="Family members: manage the faces the glasses should recognize">
+            <img src="assets/img/app-family-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App screen listing recognized family faces">
+            <span class="gal__cap"><b>Family app</b> recognized faces</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="outcome reveal" aria-labelledby="mb-result">
+      <h3 class="block__title" id="mb-result"><span class="zh">成果</span><span class="kicker">Result</span></h3>
+      <p class="big">Working prototypes of the glasses and the bracelet, with the backend and caregiver app running together. It started as an academic prototype and is now being developed into a <strong>startup product</strong>.</p>
+      <ul class="tags">
+        <li>ESP32-S3</li><li>ESP32-C3</li><li>C++ (Arduino)</li><li>I2C</li><li>MAX30102</li><li>MAX30205</li><li>MPU6050</li><li>SSD1306 OLED</li><li>Python</li><li>Flask</li><li>OpenCV</li><li>LBPH</li><li>MobileNetV2 · ONNX</li><li>scikit-learn</li><li>YOLOv4-tiny</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Capacitor</li><li>3D printing</li>
+      </ul>
+    </section>
+  </div>
+</article>
+
+<!-- ============ PROJECT 03 · AXIS ============ -->
+<article class="project" id="axis" style="--pa: var(--c-cyan); --pa-soft: var(--c-cyan-soft)" aria-labelledby="ax-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">03</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">Project 03 · Sagemcom internship · Summer 2026</p>
+        <h2 class="p-title zh reveal" id="ax-title"><span class="nw">工业视觉检测</span><span class="nw">与监控系统</span></h2>
+        <p class="p-name reveal">AXIS</p>
+        <p class="p-sub reveal">Real-time supervision of a PCB inspection cell, and a deep-learning inspector that sees a defect the line’s industrial sensor could not.</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Sole developer
+          </li>
+          <li>2 months</li>
+          <li>17-page technical report to the Test Development department</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ax-problem">
+        <h3 class="block__title" id="ax-problem"><span class="zh">问题</span><span class="kicker">The problem</span></h3>
+        <p class="big">A metal shield on the board must be <strong>pressed flat</strong>, not just present. An edge lifted 1–3 mm leaks radiation and makes the board non-conforming.</p>
+        <p>The line’s Cognex Checker 4G7 gave its verdict only as hard-wired on/off outputs: no history, no timestamps, no stored image, no traceability and no cause, just “good / not good”.</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ax-states">
+        <h3 class="block__title" id="ax-states"><span class="zh">三种状态</span><span class="kicker">Three states to separate</span></h3>
+        <table class="states">
+          <thead><tr><th scope="col">State</th><th scope="col">Looks like</th><th scope="col">Decision</th></tr></thead>
+          <tbody>
+            <tr><td><span class="pill pill--ok">OK</span></td><td>shield placed and pressed flat</td><td>accept</td></tr>
+            <tr><td><span class="pill pill--warn">Loose</span></td><td>right place, one edge lifted 1–3 mm</td><td>reject</td></tr>
+            <tr><td><span class="pill pill--bad">Missing</span></td><td>nothing on the footprint</td><td>reject</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- part 1 : supervision chain -->
+    <section class="chain-wrap reveal" aria-labelledby="ax-sup">
+      <h3 class="block__title" id="ax-sup"><span class="zh">第一部分 · 实时监控</span><span class="kicker">Part 1 · Supervision, validated on real hardware</span></h3>
+      <ol class="chain">
+        <li><b>Cognex Checker 4G7</b><span>2 inspection sensors + ladder logic → outputs D0 / D1</span></li>
+        <li><b>Siemens S7-1200</b><span>wired to I1.0 / I1.2, copied into DB1 (TIA Portal V17)</span></li>
+        <li><b>Snap7 · 500 ms</b><span>Python reads one status byte over S7comm</span></li>
+        <li><b>FastAPI</b><span>one row per board in SQLite, FTP server receives the images</span></li>
+        <li><b>WebSocket</b><span>pushes every state change to the browser</span></li>
+        <li><b>Dashboard</b><span>operator / admin roles, bcrypt + signed session cookie</span></li>
+      </ol>
+      <p class="chain__note">The data source sits behind one interface switched by a single setting (<code>mock</code> · <code>real</code> · <code>vision</code>). When inspection later moved from the Cognex sensor to a webcam, no line of the dashboard, storage or real-time transport had to be rewritten.</p>
+
+      <div class="shots">
+        <div class="toggle-shot" id="passFail">
+          <div class="toggle-shot__bar">
+            <div class="seg seg--sm" role="tablist" aria-label="Dashboard verdict">
+              <span class="seg__thumb" aria-hidden="true"></span>
+              <button role="tab" aria-selected="true" data-shot="pass">PASS</button>
+              <button role="tab" aria-selected="false" tabindex="-1" data-shot="fail">FAIL</button>
+            </div>
+            <span class="mono dim">Live console · real Cognex image via FTP</span>
+          </div>
+          <div class="toggle-shot__frame">
+            <img data-shot="pass" class="is-on" src="assets/img/axis-pass-800.webp" srcset="assets/img/axis-pass-800.webp 800w, assets/img/axis-pass-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="733" loading="lazy" decoding="async" alt="AXIS console showing a PASS verdict with the inspection capture, production counters and pass rate">
+            <img data-shot="fail" src="assets/img/axis-fail-800.webp" srcset="assets/img/axis-fail-800.webp 800w, assets/img/axis-fail-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="733" loading="lazy" decoding="async" alt="AXIS console showing a FAIL verdict">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- discovery -->
+    <section class="discover reveal" aria-labelledby="ax-disc">
+      <h3 class="block__title" id="ax-disc"><span class="zh">关键发现</span><span class="kicker">The discovery · a defect invisible from above</span></h3>
+      <p class="big">Running it on real boards exposed the real problem: <strong>the Cognex sensor only caught a missing shield.</strong> A shield placed but not pressed flat passed as good.</p>
+      <div class="geo" id="geo" data-state="ok">
+        <div class="seg" role="tablist" aria-label="Shield condition">
+          <span class="seg__thumb" aria-hidden="true"></span>
+          <button role="tab" aria-selected="true" data-geo="ok">Seated</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="missing">Missing</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="tilt">Loose (tilted)</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="lift">Lifted flat</button>
+        </div>
+        <div class="geo__body">
+          <svg class="geo__svg" viewBox="0 0 520 260" role="img" aria-labelledby="geoDesc">
+            <title id="geoDesc">Side view of a camera above the board, and what it records from the top</title>
+            <!-- camera -->
+            <g class="geo__cam"><rect x="150" y="10" width="60" height="26" rx="4"/><path d="M168 36h24l-4 10h-16z"/></g>
+            <text class="geo__lbl" x="218" y="28">camera, top-down</text>
+            <!-- rays -->
+            <path class="geo__ray" d="M180 46 L 120 196"/>
+            <path class="geo__ray" d="M180 46 L 240 196"/>
+            <!-- board -->
+            <rect class="geo__board" x="40" y="200" width="290" height="14" rx="2"/>
+            <text class="geo__lbl" x="40" y="236">PCB</text>
+            <!-- shield states -->
+            <g class="geo__shield geo__shield--ok"><rect x="120" y="186" width="120" height="14" rx="1"/></g>
+            <g class="geo__shield geo__shield--lift"><rect x="120" y="178" width="120" height="14" rx="1"/><path class="geo__gap" d="M120 196h120"/></g>
+            <g class="geo__shield geo__shield--tilt"><path d="M120 200 L 240 186 L 240 172 L 120 186 Z"/></g>
+            <g class="geo__shield geo__shield--missing"><rect x="120" y="196" width="120" height="4" class="geo__pad"/></g>
+            <!-- specular reflection -->
+            <path class="geo__refl geo__refl--back" d="M180 186 L 180 52"/>
+            <path class="geo__refl geo__refl--away" d="M180 179 L 268 70"/>
+            <!-- top view -->
+            <text class="geo__lbl" x="372" y="28">what it records</text>
+            <rect class="geo__top-board" x="372" y="44" width="128" height="170" rx="4"/>
+            <rect class="geo__top-shield" x="396" y="80" width="80" height="98" rx="2"/>
+          </svg>
+          <dl class="geo__verdicts" aria-live="polite">
+            <div><dt>Top-down image</dt><dd id="geoSeen">bright, specular shield</dd></div>
+            <div><dt>Cognex Checker</dt><dd id="geoCognex" class="v-ok">pass</dd></div>
+            <div><dt>AXIS model</dt><dd id="geoAxis" class="v-ok">OK</dd></div>
+            <p class="geo__why" id="geoWhy">The reference case: shield placed and pressed flat.</p>
+          </dl>
+        </div>
+      </div>
+      <p class="discover__note">Proved by measurement, not tuning: a 1.5 mm lift at 150 mm working distance is about a 1 % scale change, under 2 pixels on a 376-pixel-wide image. A tilted edge, though, deflects the specular reflection away from the lens and the region goes dark. That signal exists in the pixels, but the Checker only offers zone thresholds and no pixel access. <strong>The fix was a different camera, not a better setting.</strong></p>
+      <figure class="cognex">
+        <button class="zoomable" type="button" data-full="assets/img/axis-cognex-1270.webp" data-caption="Cognex Checker 4G7 configuration: Area Pattern sensor on the shield footprint">
+          <img src="assets/img/axis-cognex-800.webp" srcset="assets/img/axis-cognex-800.webp 800w, assets/img/axis-cognex-1270.webp 1270w" sizes="(max-width: 960px) 92vw, 560px" width="1270" height="926" loading="lazy" decoding="async" alt="Cognex Checker software with an Area Pattern sensor placed on the shield footprint">
+        </button>
+        <figcaption>Before: the Cognex Checker 4G7 configured with Brightness + Area Pattern sensors and ladder logic, which I set up first.</figcaption>
+      </figure>
+    </section>
+
+    <!-- part 2 : vision -->
+    <section class="vision" aria-labelledby="ax-vis">
+      <h3 class="block__title reveal" id="ax-vis"><span class="zh">第二部分 · 视觉重建</span><span class="kicker">Part 2 · Rebuilding the inspection in Python</span></h3>
+      <ol class="steps reveal">
+        <li><b>USB webcam</b><span>Microsoft LifeCam HD-3000, 720p: full pixel access</span></li>
+        <li><b>Board normalisation</b><span>green-PCB mask → morphology → min-area rectangle → homography to a 1100 × 592 canonical view, with guards against stray green blobs</span></li>
+        <li><b>ResNet-18</b><span>pre-trained, only the last block and output layer fine-tuned on 300 real images (100 per class, 4 sessions)</span></li>
+        <li><b>Verdict with a cause</b><span>OK / loose / missing goes into the database, WebSocket and display, not just a boolean</span></li>
+        <li><b>Right to abstain</b><span>confidence &lt; 0.55 or brightness outside the trained 72–99 range → INDETERMINATE, nothing written</span></li>
+      </ol>
+
+      <div class="classifier reveal" id="classifier">
+        <div class="classifier__bar">
+          <div class="seg seg--sm" role="tablist" aria-label="Classifier output">
+            <span class="seg__thumb" aria-hidden="true"></span>
+            <button role="tab" aria-selected="true" data-cls="ok">OK</button>
+            <button role="tab" aria-selected="false" tabindex="-1" data-cls="loose">Loose</button>
+            <button role="tab" aria-selected="false" tabindex="-1" data-cls="missing">Missing</button>
+          </div>
+          <span class="mono dim">Left: board found in frame · Right: rectified view, ROI, class probabilities</span>
+        </div>
+        <div class="classifier__frame">
+          <img data-cls="ok" class="is-on" src="assets/img/axis-ok-800.webp" srcset="assets/img/axis-ok-800.webp 800w, assets/img/axis-ok-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="Inspector output: OK with probability 0.96">
+          <img data-cls="loose" src="assets/img/axis-loose-800.webp" srcset="assets/img/axis-loose-800.webp 800w, assets/img/axis-loose-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="Inspector output: LOOSE with probability 1.00">
+          <img data-cls="missing" src="assets/img/axis-missing-800.webp" srcset="assets/img/axis-missing-800.webp 800w, assets/img/axis-missing-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="Inspector output: MISSING with probability 1.00">
+          <span class="classifier__p" id="clsP">p = 0.96</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="ax-res">
+      <h3 class="block__title reveal" id="ax-res"><span class="zh">实验结果</span><span class="kicker">Result · one whole capture session held out for testing</span></h3>
+      <ul class="kpis kpis--4">
+        <li class="reveal"><b><span data-count="93">93</span>%</b><span>overall accuracy on the held-out session</span></li>
+        <li class="reveal"><b><span data-count="100">100</span>%</b><span>on missing shield</span></li>
+        <li class="reveal"><b><span data-count="82">82</span>%</b><span>on loose shield, the defect the Cognex missed</span></li>
+        <li class="reveal"><b><span data-count="7">7</span> ms</b><span>per image</span></li>
+      </ul>
+      <div class="table-wrap reveal">
+        <table class="cmp">
+          <caption>Per-class accuracy, held-out session</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">OK</th><th scope="col">Missing</th><th scope="col">Loose</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Pixels + nearest centroid</th><td>88%</td><td>98%</td><td>72%</td></tr>
+            <tr><th scope="row">ResNet-18 frozen + linear layer</th><td>96%</td><td>100%</td><td>76%</td></tr>
+            <tr class="best"><th scope="row">ResNet-18, last block fine-tuned</th><td>97%</td><td>100%</td><td>82%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="wide reveal">
+        <button class="zoomable" type="button" data-full="assets/img/axis-shield-1600.webp" data-caption="Console in vision mode: live shield check, results feed and per-cause diagnostic counters">
+          <img src="assets/img/axis-shield-800.webp" srcset="assets/img/axis-shield-800.webp 800w, assets/img/axis-shield-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="668" loading="lazy" decoding="async" alt="AXIS console in vision mode with a live webcam view of the board, results feed and shield diagnostic counters by cause">
+        </button>
+        <figcaption>Console in vision mode: the shield diagnosis panel counts boards by cause (OK / loose / missing), something the original setup could not report.</figcaption>
+      </figure>
+    </section>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ax-limits">
+        <h3 class="block__title" id="ax-limits"><span class="zh">已知局限</span><span class="kicker">Known limits, measured</span></h3>
+        <p>The main weakness is <strong>absolute lighting</strong>: drift between sessions (19.2 grey levels) and moving the board in the field (18.5) shift the signal more than the defect itself (15.3). All four sessions come from the same morning, so scores are optimistic. Until diffuse lighting and relative photometric input are added, the lighting guard detects the condition and suspends the verdict.</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ax-tech">
+        <h3 class="block__title" id="ax-tech"><span class="zh">技术栈</span><span class="kicker">Tech</span></h3>
+        <ul class="tags">
+          <li>Python</li><li>PyTorch</li><li>ResNet-18</li><li>OpenCV</li><li>FastAPI</li><li>WebSocket</li><li>SQLAlchemy</li><li>SQLite</li><li>Siemens S7-1200</li><li>TIA Portal V17</li><li>python-snap7</li><li>pyftpdlib</li><li>Cognex Checker 4G7</li><li>bcrypt</li><li>Vanilla JS</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EXPERIENCE + EDUCATION ============ -->
+<section class="cv" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Experience</p>
+      <h2 class="sec-title zh" id="exp-title">实习与工作经历</h2>
+    </header>
+    <ol class="timeline">
+      <li class="reveal">
+        <p class="tl__when">Summer 2026 · 2 months</p>
+        <div><h3>Sagemcom <span>Engineering Intern, Industrial Vision &amp; Automation</span></h3>
+        <p>Sole developer of AXIS, an AI inspection and supervision system for a PCB assembly line; delivered with a 17-page technical report to the Test Development department.</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2025 – present</p>
+        <div><h3>GoMyCode <span>Part-Time Instructor, Python &amp; Generative AI</span></h3>
+        <p>Teach Python and generative AI through live coding; supervise each cohort to an independent final project.</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">Summer 2025 · 1 month</p>
+        <div><h3>Sagemcom <span>Automation &amp; Robotics Intern, R&amp;D</span></h3>
+        <p>Developed and validated motion routines for a Dobot M1 Pro SCARA arm: motion programming, tool control and production-grade automation practice.</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2025 – 2026</p>
+        <div><h3>IEEE Student Branch ENSIT <span>Treasurer &amp; Head of Treasury · volunteer</span></h3>
+        <p>Ran branch budgeting, expenditure control and financial reporting; negotiated corporate sponsorship contracts.</p></div>
+      </li>
+    </ol>
+
+    <header class="sec-head sec-head--sub reveal">
+      <p class="kicker">Education</p>
+      <h2 class="sec-title sec-title--sm zh">教育背景</h2>
+    </header>
+    <ol class="timeline timeline--edu">
+      <li class="reveal">
+        <p class="tl__when">Sep 2026 – Sep 2027</p>
+        <div><h3>Changzhou Vocational Institute of Mechatronic Technology <span class="zh-inline">常州机电职业技术学院</span></h3>
+        <p>Chinese + New Energy Vehicle Technology · one-year mobility replacing the final year of the ENSIT degree.</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2024 – 2027 (expected)</p>
+        <div><h3>ENSIT, National Higher School of Engineers of Tunis</h3>
+        <p>National Engineering Diploma (Master’s equivalent), Electrical Engineering.</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2022 – 2024</p>
+        <div><h3>IPEIN, Preparatory Institute for Engineering Studies of Nabeul</h3>
+        <p>Preparatory cycle, Physics &amp; Technical Sciences.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills" id="skills" aria-labelledby="sk-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Skills</p>
+      <h2 class="sec-title zh" id="sk-title">专业技能</h2>
+    </header>
+    <div class="skills__grid">
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">嵌入式与物联网</span></p><h3>Embedded &amp; IoT</h3><p>STM32 bare-metal, ESP32, I2C sensors, MQTT, WebSockets, low-power design</p></div>
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">人工智能与视觉</span></p><h3>AI &amp; Computer Vision</h3><p>PyTorch, OpenCV, YOLO, ResNet / MobileNet transfer learning, scikit-learn</p></div>
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">工业自动化</span></p><h3>Industrial Automation</h3><p>Siemens S7-1200, TIA Portal, Snap7, PROFINET, Cognex vision, SCARA robots</p></div>
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">编程语言</span></p><h3>Programming</h3><p>Python, C / C++, JavaScript / TypeScript, MATLAB</p></div>
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">软件与工具</span></p><h3>Software &amp; Tools</h3><p>FastAPI, Flask, Node.js, React, SQL, Git</p></div>
+      <div class="skill card glow reveal"><p class="card__k"><span class="zh">语言能力</span></p><h3>Languages</h3><p>Arabic (native) · French (fluent) · English (fluent) · German (A2) · Chinese (beginner, preparing HSK 1)</p></div>
+    </div>
+    <p class="certs reveal"><span class="kicker">Certifications</span> Coursera / DeepLearning.AI (2025): Supervised Machine Learning: Regression and Classification; Advanced Learning Algorithms. MATLAB Onramp (2025).</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="ct-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Contact</p>
+      <h2 class="sec-title zh" id="ct-title">联系方式</h2>
+    </header>
+    <p class="contact__lede reveal">Looking for an internship in <strong>New Energy Vehicle Technology, Computer Vision, Embedded Systems or AI</strong>. Based in Changzhou, Jiangsu, China.</p>
+    <ul class="contact__list">
+      <li class="reveal">
+        <span class="kicker">Email</span>
+        <a class="contact__big" href="mailto:youssefbenmbarek123@gmail.com">youssefbenmbarek123@gmail.com</a>
+      </li>
+      <li class="reveal">
+        <span class="kicker"><span class="zh">微信</span> WeChat</span>
+        <span class="contact__row">
+          <span class="contact__big mono-big" id="wechatId">wxid_ogty82qpu8q612</span>
+          <button class="chip" type="button" id="copyWechat" data-copy="wxid_ogty82qpu8q612">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Copy</span>
+          </button>
+        </span>
+      </li>
+      <li class="reveal">
+        <span class="kicker"><span class="zh">现居住地</span> Location</span>
+        <span class="contact__big">Changzhou, Jiangsu, China</span>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span class="zh foot__cn">贝苏宇</span>
+    <span>© 2026 Youssef Ben Mbarek</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <figure>
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__close icon-btn" type="button" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__prev icon-btn" type="button" id="lbPrev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__next icon-btn" type="button" id="lbNext" aria-label="Next image">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
