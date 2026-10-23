@@ -194,7 +194,9 @@
       v.addEventListener('click', function () { st.paused = !st.paused; sync(); });
     });
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (en) { st.inView = en[0].isIntersecting; sync(); }, { threshold: 0.25 }).observe(s2r);
+      // "in view" = any part of the player inside the middle 60% of the screen
+      // (a ratio threshold fails when compare mode makes the player taller than a phone screen)
+      new IntersectionObserver(function (en) { st.inView = en[0].isIntersecting; sync(); }, { rootMargin: '-20% 0px -20% 0px', threshold: 0 }).observe(s2r);
     }
     document.addEventListener('visibilitychange', sync);
     sync();
