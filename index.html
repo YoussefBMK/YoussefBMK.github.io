@@ -11,11 +11,15 @@
 <meta property="og:description" content="Electrical Engineering · AI · Embedded Systems">
 <meta property="og:image" content="assets/img/podium-600.webp">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://youssefbmk.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://youssefbmk.github.io/zh/">
 <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/notoserifsc-sub.woff2" as="font" type="font/woff2" crossorigin>
 <script>
   (function () {
-    var d = document.documentElement, t = null;
+    var d = document.documentElement, t = null, l = null;
+    try { l = localStorage.getItem('lang'); } catch (e) {}
+    if (l === 'zh' || (!l && /^zh/i.test(navigator.language || ''))) { location.replace('zh/' + location.hash); return; }
     d.classList.remove('no-js'); d.classList.add('js');
     try { t = localStorage.getItem('theme'); } catch (e) {}
     if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
@@ -40,6 +44,7 @@
       <a href="#contact"><span class="zh">联系</span> Contact</a>
     </nav>
     <div class="nav__tools">
+      <a class="lang-btn" href="zh/" hreflang="zh-CN" lang="zh-CN" data-lang="zh" title="切换到中文">中文</a>
       <button class="icon-btn" id="printBtn" type="button" aria-label="Save as PDF" title="Save as PDF">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       </button>

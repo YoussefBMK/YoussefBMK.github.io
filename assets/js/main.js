@@ -6,6 +6,20 @@
   var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var ZH = /^zh/i.test(root.lang);
+  var T = ZH ? {
+    play: '播放视频', pause: '暂停视频', copied: '已复制', copyFail: '请手动复制', copy: '复制'
+  } : {
+    play: 'Play videos', pause: 'Pause videos', copied: 'Copied', copyFail: 'Select & copy', copy: 'Copy'
+  };
+
+  /* ---------- language switch: remember the visitor's choice ---------- */
+  $$('.lang-btn').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('lang', a.getAttribute('data-lang')); } catch (e) {}
+      a.href = a.getAttribute('href').split('#')[0] + location.hash;
+    });
+  });
 
   /* ---------- theme ---------- */
   var themeListeners = [];
@@ -163,7 +177,7 @@
       s2r.setAttribute('data-mode', st.mode);
       s2r.setAttribute('data-active', st.active);
       playBtn.classList.toggle('is-paused', st.paused);
-      playBtn.setAttribute('aria-label', st.paused ? 'Play videos' : 'Pause videos');
+      playBtn.setAttribute('aria-label', st.paused ? T.play : T.pause);
       clips.forEach(function (c) {
         var v = $('video', c);
         var visible = st.mode === 'compare' || c.getAttribute('data-v') === st.active;
@@ -292,7 +306,12 @@
     });
   }
   var geo = $('#geo');
-  var geoData = {
+  var geoData = ZH ? {
+    ok:      { seen: '明亮的镜面反光屏蔽罩', cognex: ['合格', 'v-ok'], axis: ['合格', 'v-ok'], why: '基准情况：屏蔽罩已放置并压平。镜面般的金属把光直接反射回镜头。' },
+    missing: { seen: '裸露的焊盘区域', cognex: ['可检出', 'v-ok'], axis: ['可检出 · 100%', 'v-ok'], why: '金属区域从图像中消失。Checker 本来就能发现这种情况，也不需要 AI：模型对此类的识别率为 100%。' },
+    tilt:    { seen: '轮廓不变，区域变暗', cognex: ['误判为合格', 'v-bad'], axis: ['可检出 · 82%', 'v-ok'], why: '这正是产线上的真实缺陷。几度的倾斜就会把反射光偏离镜头，该区域随之变暗。Checker 的区域阈值无法利用这种纹理，而 CNN 能从像素中学到它。' },
+    lift:    { seen: '与压平时完全相同', cognex: ['看不见', 'v-miss'], axis: ['看不见', 'v-miss'], why: '整体平行抬起时，轮廓几乎不变：约 1% 的尺度变化，在 376 像素宽的图像上不到 2 个像素。任何俯视相机都看不到这种情况，这是几何极限，而不是参数设置问题。' }
+  } : {
     ok:      { seen: 'bright, specular shield', cognex: ['pass', 'v-ok'], axis: ['OK', 'v-ok'], why: 'The reference case: shield placed and pressed flat. Its mirror-like metal reflects light straight back into the lens.' },
     missing: { seen: 'bare footprint', cognex: ['detected', 'v-ok'], axis: ['detected · 100%', 'v-ok'], why: 'The metal footprint disappears from the image. The Checker already caught this, and it does not need AI: the model gets 100% on it.' },
     tilt:    { seen: 'contour unchanged, region goes dark', cognex: ['passes as good', 'v-bad'], axis: ['detected · 82%', 'v-ok'], why: 'The production defect. A few degrees of tilt deflect the reflection away from the lens, so the region collapses to dark. The Checker’s zone thresholds ignore that texture; the CNN learns it from pixels.' },
@@ -342,7 +361,7 @@
   var copyBtn = $('#copyWechat');
   if (copyBtn) copyBtn.addEventListener('click', function () {
     var txt = copyBtn.getAttribute('data-copy'), label = $('span', copyBtn);
-    function done(ok) { label.textContent = ok ? 'Copied' : 'Select & copy'; setTimeout(function () { label.textContent = 'Copy'; }, 1800); }
+    function done(ok) { label.textContent = ok ? T.copied : T.copyFail; setTimeout(function () { label.textContent = T.copy; }, 1800); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { done(true); }, function () { done(false); });
     else done(false);
   });

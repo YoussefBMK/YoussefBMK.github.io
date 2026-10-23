@@ -13,6 +13,16 @@ npx http-server . -p 8137
 Push to a repository and enable **Settings → Pages → Deploy from branch → `main` / root**.
 A repository named `<username>.github.io` is served at `https://<username>.github.io/`.
 
+## Chinese version (`/zh/`)
+`zh/index.html` is generated — do not edit it by hand. After changing `index.html`, run
+```
+python tools/build_zh.py
+```
+It applies the translation table in `tools/build_zh.py` and stops with a list of any English
+snippets it can no longer find, so you know exactly which translations to update.
+The root page sends visitors to `/zh/` when their browser language is Chinese (or they chose 中文 before);
+the 中文 / EN button switches and remembers the choice.
+
 ## Editing notes
 - Chinese headings use a subset of Noto Serif SC (`assets/fonts/notoserifsc-sub.woff2`) that only contains
   the characters on the page. If you add new Chinese text, regenerate the subset or the new characters

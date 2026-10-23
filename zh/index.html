@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>贝苏宇 Youssef Ben Mbarek — 工程作品集</title>
+<meta name="description" content="贝苏宇（Youssef Ben Mbarek）的工程作品集：电气工程、人工智能与嵌入式系统。AntRoute 去中心化配送车队、阿尔茨海默症患者智能辅助系统、AXIS 工业视觉检测。">
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3f0e9" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="贝苏宇 Youssef Ben Mbarek — 工程作品集">
+<meta property="og:description" content="电气工程 · 人工智能 · 嵌入式系统">
+<meta property="og:image" content="../assets/img/podium-600.webp">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://youssefbmk.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://youssefbmk.github.io/zh/">
+<link rel="preload" href="../assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/notoserifsc-sub.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  (function () {
+    var d = document.documentElement, t = null;
+    d.classList.remove('no-js'); d.classList.add('js');
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    d.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<a class="skip" href="#work">跳到项目</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="返回顶部">
+      <span class="nav__mark">YBM</span><span class="nav__cn zh">贝苏宇</span>
+    </a>
+    <nav class="nav__links" aria-label="栏目">
+      <a href="#work">项目</a>
+      <a href="#experience">经历</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <div class="nav__tools">
+      <a class="lang-btn" href="../" hreflang="en" lang="en" data-lang="en" title="Switch to English">EN</a>
+      <button class="icon-btn" id="printBtn" type="button" aria-label="保存为 PDF" title="保存为 PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="切换深色 / 浅色主题" title="切换主题">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav__progress" aria-hidden="true"><span id="progress"></span></div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="简介">
+  <canvas class="hero__field" id="field" aria-hidden="true"></canvas>
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="kicker hero__kicker reveal"><span class="dot"></span><span class="zh">工程作品集</span> · 2026</p>
+      <h1 class="hero__name" aria-label="Youssef Ben Mbarek">
+        <span class="line"><span class="word">Youssef</span></span>
+        <span class="line"><span class="word">Ben&nbsp;Mbarek</span></span>
+      </h1>
+      <p class="hero__disciplines reveal">
+        <span>电气工程</span><i>·</i><span>人工智能</span><i>·</i><span>嵌入式系统</span>
+      </p>
+      <p class="hero__lede reveal">
+        突尼斯国立高等工程师学院（ENSIT）电气工程专业学生，2026–27 学年在常州机电职业技术学院交流学习。
+        我做嵌入式硬件、计算机视觉，以及与之配套的软件：从手工焊接的传感器，到实时监控看板。
+      </p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--solid" href="#work">查看项目
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">联系我</a>
+      </div>
+    </div>
+
+    <figure class="badge reveal" aria-label="贝苏宇的照片">
+      <div class="badge__ticks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="badge__photo">
+        <img src="../assets/img/portrait-448.webp" width="448" height="448" alt="Youssef Ben Mbarek" fetchpriority="high">
+      </div>
+      <figcaption class="badge__meta">
+        <span class="badge__cn zh">贝苏宇</span>
+        <span class="mono">Youssef Ben Mbarek</span>
+        <span class="mono dim">ENSIT · 突尼斯 → 常州</span>
+      </figcaption>
+      <span class="badge__vertical zh" aria-hidden="true">贝苏宇</span>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <ul class="hero__stats">
+      <li class="reveal">
+        <span class="stat__value">冠军</span>
+        <span class="stat__label">IEEE RAS &amp; VTS SmartFleet 挑战赛（TSYP 13）</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value"><span data-count="93">93</span>%</span>
+        <span class="stat__label">Sagemcom AXIS 屏蔽罩检测模型留出验证准确率</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value"><span data-count="87.3" data-decimals="1">87.3</span>%</span>
+        <span class="stat__label">AntRoute 无中央控制器下的准时送达率</span>
+      </li>
+      <li class="reveal">
+        <span class="stat__value">2</span>
+        <span class="stat__label">可运行的可穿戴设备：AR 眼镜 + MEMO-BAND 健康手环</span>
+      </li>
+    </ul>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>ESP32</span><span>C++ 固件</span><span>PyTorch</span><span>OpenCV</span><span>Siemens S7-1200</span><span>Snap7</span><span>FastAPI</span><span>WebSockets</span><span>React</span><span>Node.js</span><span>I2C 传感器</span><span>ResNet-18</span><span>MobileNetV2</span><span>TIA Portal</span><span>Capacitor</span><span>3D 打印</span>
+      <span>ESP32</span><span>C++ 固件</span><span>PyTorch</span><span>OpenCV</span><span>Siemens S7-1200</span><span>Snap7</span><span>FastAPI</span><span>WebSockets</span><span>React</span><span>Node.js</span><span>I2C 传感器</span><span>ResNet-18</span><span>MobileNetV2</span><span>TIA Portal</span><span>Capacitor</span><span>3D 打印</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT INDEX ============ -->
+<section class="index" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      
+      <h2 class="sec-title zh" id="work-title">精选项目</h2>
+    </header>
+    <ol class="index__list">
+      <li class="reveal" style="--pa: var(--c-amber)">
+        <a href="#antroute" data-preview="../assets/img/podium-600.webp">
+          <span class="index__num">01</span>
+          <span class="index__name">AntRoute<small class="zh">去中心化多机器人配送车队</small></span>
+          <span class="index__desc">去中心化车队调度 · TSYP 13 冠军</span>
+          <span class="index__year">2025</span>
+        </a>
+      </li>
+      <li class="reveal" style="--pa: var(--c-green)">
+        <a href="#memo" data-preview="../assets/img/glasses-hand-600.webp">
+          <span class="index__num">02</span>
+          <span class="index__name">MEMO-BAND 系统<small class="zh">阿尔茨海默症患者智能辅助系统</small></span>
+          <span class="index__desc">AR 眼镜 · 健康手环 · 后端 · 家属端 App</span>
+          <span class="index__year">2026</span>
+        </a>
+      </li>
+      <li class="reveal" style="--pa: var(--c-cyan)">
+        <a href="#axis" data-preview="../assets/img/axis-loose-800.webp">
+          <span class="index__num">03</span>
+          <span class="index__name">AXIS<small class="zh">工业视觉检测与监控系统</small></span>
+          <span class="index__desc">工业视觉与 PLC 监控 · Sagemcom</span>
+          <span class="index__year">2026</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div class="index__preview" aria-hidden="true"><img alt="" id="indexPreview"></div>
+</section>
+
+<!-- ============ PROJECT 01 · ANTROUTE ============ -->
+<article class="project" id="antroute" style="--pa: var(--c-amber); --pa-soft: var(--c-amber-soft)" aria-labelledby="ar-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">01</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">项目 01 · TSYP 13 · 2025</p>
+        <h2 class="p-title zh reveal" id="ar-title"><span class="nw">去中心化多机器人</span><span class="nw">配送车队</span></h2>
+        <p class="p-name reveal">AntRoute</p>
+        <p class="p-sub reveal">基于仿生数字信息素地图与公平性拍卖的去中心化多智能体车队调度。</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4.5a3 3 0 0 0 3.6 4M16 6h3.5a3 3 0 0 1-3.6 4M12 13v4M8.5 20h7M10 17h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            冠军 · IEEE RAS &amp; VTS SmartFleet 挑战赛
+          </li>
+          <li>2 人团队</li>
+          <li>仿真 + 硬件原型</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ar-problem">
+        <h3 class="block__title" id="ar-problem"><span class="zh">问题</span></h3>
+        <p class="big">最后一公里配送占总运输成本的<strong>一半以上</strong>。</p>
+        <p>自动驾驶车队可以缓解这一问题，但多数车队系统依赖单一的中央控制器：控制器一旦故障，整个车队停摆；车队规模扩大后，它还会成为通信瓶颈。许多去中心化方法只优化速度，结果一些车辆超负荷，另一些闲置，偏远街区的服务也更差。</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ar-solution">
+        <h3 class="block__title" id="ar-solution"><span class="zh">方案</span></h3>
+        <p>AntRoute 是面向<strong>卡车、地面机器人和无人机</strong>混合车队的去中心化调度系统。车辆只与附近车辆通信，并自行协商每个配送任务由谁执行。</p>
+        <ul class="specs">
+          <li><b>500 m</b><span>邻车通信范围</span></li>
+          <li><b>2 s</b><span>消息间隔</span></li>
+          <li><b>~6 s</b><span>发现故障车辆所需时间</span></li>
+          <li><b>30 s</b><span>路径重规划周期</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- three ideas -->
+    <section class="ideas" aria-labelledby="ar-ideas">
+      <h3 class="block__title reveal" id="ar-ideas"><span class="zh">核心思路</span></h3>
+      <div class="ideas__grid">
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="24" r="11" opacity=".55"/><circle cx="24" cy="24" r="18" opacity=".25"/></g><g fill="currentColor"><circle cx="9" cy="12" r="1.6"/><circle cx="38" cy="10" r="1.6"/><circle cx="40" cy="36" r="1.6"/></g></svg>
+          <p class="card__k">01</p>
+          <h4>数字信息素地图</h4>
+          <p>每辆车维护一张本地地图，记录配送需求、拥堵和优先级，并通过衰减、扩散以及与邻车交换来更新。与经典蚁群算法不同，信息素会在<em>新</em>请求可能出现的地方累积，使车队在需求到来之前就提前就位。</p>
+        </div>
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 38h32"/><path d="M13 38V26M24 38V14M35 38V21"/><path d="M20 10l4-4 4 4" /></g></svg>
+          <p class="card__k">02</p>
+          <h4>公平性拍卖</h4>
+          <p>车辆对每个任务竞标，评分综合考虑行驶时间、电量消耗和公平性：该车已经完成的工作量，以及目的地区域此前得到的服务水平。紧急医疗配送跳过公平性规则，立即分配。</p>
+        </div>
+        <div class="card glow reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="24" r="4" stroke-dasharray="2 2"/><circle cx="34" cy="14" r="4"/><circle cx="34" cy="34" r="4"/><path d="M16 22l14-6M16 26l14 6M34 18v12"/></g></svg>
+          <p class="card__k">03</p>
+          <h4>协同故障恢复</h4>
+          <p>某辆车的状态消息中断后，邻车约 6 秒内即可发现故障，并对其任务发起紧急拍卖。当 3 个及以上任务无车接手时，车队会在汇合点设立<em>虚拟换货站</em>来交接包裹。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- architecture -->
+    <section class="arch reveal" aria-labelledby="ar-arch">
+      <h3 class="block__title" id="ar-arch"><span class="zh">系统架构</span><span class="kicker">每辆车同时运行四层</span></h3>
+      <ol class="layers">
+        <li><span class="layers__i">L1</span><span class="layers__n">信息素地图</span><span class="layers__d">衰减 · 扩散 · 邻车交换</span></li>
+        <li><span class="layers__i">L2</span><span class="layers__n">基于拍卖的任务分配</span><span class="layers__d">时间 · 电量 · 公平性评分</span></li>
+        <li><span class="layers__i">L3</span><span class="layers__n">自适应路径规划</span><span class="layers__d">按信息素与拥堵加权的改进 A*，每 30 秒重规划一次</span></li>
+        <li><span class="layers__i">L4</span><span class="layers__n">韧性监测</span><span class="layers__d">心跳丢失 → 紧急拍卖</span></li>
+      </ol>
+    </section>
+
+    <!-- sim to real -->
+    <section class="s2r-wrap" aria-labelledby="ar-s2r">
+      <h3 class="block__title reveal" id="ar-s2r"><span class="zh">从仿真到现实</span><span class="kicker">三段视频</span></h3>
+      <div class="s2r reveal" id="s2r" data-mode="single" data-active="sim">
+        <div class="s2r__bar">
+          <div class="seg" role="tablist" aria-label="选择视频">
+            <span class="seg__thumb" aria-hidden="true"></span>
+            <button role="tab" id="tab-sim" aria-controls="clip-sim" aria-selected="true" data-v="sim"><i>01</i> 仿真</button>
+            <button role="tab" id="tab-real" aria-controls="clip-real" aria-selected="false" tabindex="-1" data-v="real"><i>02</i> 实物</button>
+            <button role="tab" id="tab-twin" aria-controls="clip-twin" aria-selected="false" tabindex="-1" data-v="twin"><i>03</i> 数字孪生</button>
+          </div>
+          <div class="s2r__tools">
+            <button class="chip" id="s2rMode" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7v14H3zM14 5h7v6h-7zM14 13h7v6h-7z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              三屏对比
+            </button>
+            <button class="chip chip--icon" id="s2rPlay" type="button" aria-label="暂停视频">
+              <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+              <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="s2r__stage">
+          <figure class="clip" id="clip-sim" role="tabpanel" aria-labelledby="tab-sim" data-v="sim">
+            <div class="clip__media">
+              <img class="clip__bg" src="../assets/video/sim-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="../assets/video/sim-poster.webp" width="1280" height="548" aria-label="AntRoute 车队仿真演示">
+                <source src="../assets/video/sim.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>仿真</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>网页仿真平台。</b>车队在城市网格上实时运行：拍卖、信息素轨迹、A* 路径、故障注入与性能指标。基于 React 和 HTML5 Canvas 开发。
+            </figcaption>
+          </figure>
+          <figure class="clip" id="clip-real" role="tabpanel" aria-labelledby="tab-real" data-v="real">
+            <div class="clip__media clip__media--tall">
+              <img class="clip__bg" src="../assets/video/real-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="../assets/video/real-poster.webp" width="540" height="960" aria-label="两台 ESP32 机器人在地面上运行">
+                <source src="../assets/video/real.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>实物</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>实物机器人。</b>两台 ESP32 机器人，各配两个直流电机。每台机器人根据距离和电量自行计算报价，通过 WiFi 竞得任务，然后驶向取货点和送货点。
+            </figcaption>
+          </figure>
+          <figure class="clip" id="clip-twin" role="tabpanel" aria-labelledby="tab-twin" data-v="twin">
+            <div class="clip__media">
+              <img class="clip__bg" src="../assets/video/twin-poster.webp" alt="" aria-hidden="true" loading="lazy">
+              <video muted loop playsinline preload="none" poster="../assets/video/twin-poster.webp" width="1280" height="720" aria-label="双机器人实物系统的数字孪生">
+                <source src="../assets/video/twin.mp4" type="video/mp4">
+              </video>
+              <span class="clip__tag"><i></i>数字孪生</span>
+              <span class="clip__time" aria-hidden="true"><span></span></span>
+            </div>
+            <figcaption>
+              <b>数字孪生。</b>在软件中镜像实物系统：每台机器人通过 Node.js WebSocket 服务器实时上传轮式里程计位置、电量和信息素数据；服务器负责发起每轮拍卖，并在机器人之间转发消息。
+            </figcaption>
+          </figure>
+        </div>
+        <ol class="s2r__flow" aria-label="从仿真到实物">
+          <li><b>仿真</b> 9 辆车、120 个任务、2 × 2 km 网格</li>
+          <li><b>搭建</b> 2 台运行 C++ 固件的 ESP32 机器人</li>
+          <li><b>镜像</b> 实时位置、电量与拍卖</li>
+        </ol>
+      </div>
+      <!-- print-only stills -->
+      <div class="print-only print-stills">
+        <img src="../assets/video/sim-poster.webp" alt="仿真截图">
+        <img src="../assets/video/real-poster.webp" alt="实物机器人截图">
+        <img src="../assets/video/twin-poster.webp" alt="数字孪生截图">
+      </div>
+    </section>
+
+    <!-- results -->
+    <section class="results" aria-labelledby="ar-results">
+      <h3 class="block__title reveal" id="ar-results"><span class="zh">实验结果</span><span class="kicker">Python 离散事件仿真</span></h3>
+      <p class="results__setup reveal">2 × 2 km 城市网格 · 9 辆车（2 辆卡车、5 台地面机器人、2 架无人机）· 2 小时内 120 个配送任务 · 每个场景独立运行 20 次。对比基线为贪心最近车辆法和集中式最优法（匈牙利算法）。</p>
+      <div class="bars reveal" id="bars">
+        <div class="bars__legend" aria-hidden="true">
+          <span class="lg lg--a">AntRoute</span><span class="lg lg--g">贪心算法</span><span class="lg lg--c">集中式最优</span>
+        </div>
+        <div class="metric" data-max="100">
+          <p class="metric__name">准时送达率 <span>越高越好</span></p>
+          <div class="bar bar--a" style="--v:87.3"><span>87.3%</span></div>
+          <div class="bar bar--g" style="--v:71.8"><span>71.8%</span></div>
+          <div class="bar bar--c" style="--v:91.6"><span>91.6%</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">需求高峰期准时送达率 <span>越高越好</span></p>
+          <div class="bar bar--a" style="--v:83.9"><span>83.9%</span></div>
+          <div class="bar bar--g" style="--v:53.7"><span>53.7%</span></div>
+          <div class="bar bar--c" style="--v:88.2"><span>88.2%</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">工作量公平性（基尼系数） <span>越低越好</span></p>
+          <div class="bar bar--a" style="--v:46"><span>0.23</span></div>
+          <div class="bar bar--g" style="--v:90"><span>0.45</span></div>
+          <div class="bar bar--c" style="--v:36"><span>0.18</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">每件包裹行驶距离 <span>越低越好</span></p>
+          <div class="bar bar--a" style="--v:61.7"><span>2.11 km</span></div>
+          <div class="bar bar--g" style="--v:100"><span>3.42 km</span></div>
+          <div class="bar bar--c" style="--v:56.7"><span>1.94 km</span></div>
+        </div>
+        <div class="metric">
+          <p class="metric__name">故障后任务恢复率 <span>越高越好</span></p>
+          <div class="bar bar--a" style="--v:93.3"><span>93.3%</span></div>
+          <div class="bar bar--g" style="--v:0.6"><span>0%</span></div>
+          <div class="bar bar--c bar--na" style="--v:0"><span>不适用</span></div>
+        </div>
+      </div>
+      <ul class="kpis">
+        <li class="reveal"><b><span data-count="29.4" data-decimals="1">29.4</span>%</b><span>CO₂ 排放低于贪心基线</span></li>
+        <li class="reveal"><b>28.9 → <span data-count="12.7" data-decimals="1">12.7</span>%</b><span>空驶比例，降低一半以上</span></li>
+        <li class="reveal"><b><span data-count="4.7" data-decimals="1">4.7</span> min</b><span>两辆卡车同时故障后完全恢复所需时间</span></li>
+      </ul>
+    </section>
+
+    <div class="p-grid p-grid--media">
+      <section class="block reveal" aria-labelledby="ar-hw">
+        <h3 class="block__title" id="ar-hw"><span class="zh">硬件原型</span></h3>
+        <p>为了在仿真之外验证方案，我们制作了两台 3D 打印的轮式小机器人：</p>
+        <ul class="ticks">
+          <li>每台机器人：一块 <strong>ESP32</strong>、两个直流电机和一块电机驱动板，运行基于 Arduino 编写的 C++ 固件。</li>
+          <li>机器人通过 WiFi 连接 <strong>Node.js WebSocket 服务器</strong>，由它发起每轮拍卖并在机器人之间转发消息。</li>
+          <li>每台机器人根据距离和电量自行计算报价，驶往取货点和送货点，通过轮速推算自身位置，并实时上传位置、电量和信息素数据。</li>
+          <li><strong>React + HTML5 Canvas</strong> 网页仿真平台实时显示车队，包括拍卖、信息素轨迹、A* 路径、故障注入和实时指标。</li>
+        </ul>
+        <h3 class="block__title block__title--sm"><span class="zh">技术栈</span></h3>
+        <ul class="tags">
+          <li>C++ (Arduino)</li><li>ESP32</li><li>WiFi</li><li>WebSocket</li><li>Node.js</li><li>React</li><li>Tailwind CSS</li><li>HTML5 Canvas</li><li>Vite</li><li>Python</li>
+        </ul>
+        <h3 class="block__title block__title--sm"><span class="zh">后续工作</span></h3>
+        <ul class="ticks ticks--dim">
+          <li>用强化学习自动学习拍卖权重和信息素参数</li>
+          <li>跨多个城市协调车队，并让人类司机与自动驾驶车辆协同工作</li>
+          <li>全规模测试：5 × 5 km 区域、35 辆车、8 小时</li>
+        </ul>
+      </section>
+      <figure class="podium reveal">
+        <button class="zoomable" type="button" data-full="../assets/img/podium-1100.webp" data-caption="IEEE RAS / VTS SmartFleet 挑战赛颁奖，TSYP 13" aria-label="放大领奖照片">
+          <img src="../assets/img/podium-600.webp" srcset="../assets/img/podium-600.webp 600w, ../assets/img/podium-1100.webp 1100w" sizes="(max-width: 860px) 90vw, 400px" width="600" height="1066" loading="lazy" decoding="async" alt="AntRoute 团队在 TSYP 13 RAS / VTS 挑战赛颁奖台上">
+        </button>
+        <figcaption><span class="zh">冠军</span> · RAS / VTS 挑战赛颁奖现场，TSYP 13（突尼斯学生与青年专业人士大会）</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PROJECT 02 · MEMO-BAND / ALZHEIMER ============ -->
+<article class="project" id="memo" style="--pa: var(--c-green); --pa-soft: var(--c-green-soft)" aria-labelledby="mb-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">02</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">项目 02 · 物联网 · 健康 · 2026</p>
+        <h2 class="p-title zh reveal" id="mb-title"><span class="nw">阿尔茨海默症患者</span><span class="nw">智能辅助系统</span></h2>
+        <p class="p-name reveal">MEMO-BAND</p>
+        <p class="p-sub reveal">AR 智能眼镜、MEMO-BAND 健康手环、后端服务器和家属端手机 App。从硬件、固件到后端和 App，端到端完成。</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            已完成可运行原型
+          </li>
+          <li>学术原型 → 正在发展为创业产品</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="mb-problem">
+        <h3 class="block__title" id="mb-problem"><span class="zh">问题</span></h3>
+        <p class="big">帮助阿尔茨海默症患者<strong>更安全、更独立地生活</strong>，同时让家人实时了解他们的状况。</p>
+        <p>患者需要帮助才能记起正在交谈的人是谁、自己身在何处；而当患者跌倒、生命体征异常或离开安全区域时，需要有人第一时间知道。</p>
+      </section>
+      <section class="block reveal" aria-labelledby="mb-built">
+        <h3 class="block__title" id="mb-built"><span class="zh">方案</span></h3>
+        <p>一个由四部分组成、通过 Wi-Fi 互联的物联网系统：眼镜告诉患者面前是谁；手环在本地监测生命体征和跌倒；后端负责识别；App 把这一切交到家属手中。</p>
+        <p class="hint">点击系统的任一部分查看详情。</p>
+      </section>
+    </div>
+
+    <!-- interactive system map -->
+    <section class="sysmap reveal" aria-labelledby="mb-map">
+      <h3 class="block__title" id="mb-map"><span class="zh">系统组成</span><span class="kicker">四个部分</span></h3>
+      <div class="sysmap__diagram" role="tablist" aria-label="系统组成部分">
+        <svg class="sysmap__wires" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+          <path class="wire" data-a="glasses" d="M250 75 C 340 75, 340 150, 420 150"/>
+          <path class="wire" data-a="band" d="M250 225 C 340 225, 340 150, 420 150"/>
+          <path class="wire" data-a="app" d="M580 150 L 750 150"/>
+        </svg>
+        <button class="node node--glasses" role="tab" id="t-glasses" aria-controls="p-glasses" aria-selected="true" data-node="glasses">
+          <span class="node__k">01</span><span class="node__n">AR 智能眼镜</span><span class="node__d">ESP32-S3 Sense · camera · OLED HUD</span>
+          <span class="node__wire">摄像头画面 ⇄ 姓名 + 关系</span>
+        </button>
+        <button class="node node--band" role="tab" id="t-band" aria-controls="p-band" aria-selected="false" tabindex="-1" data-node="band">
+          <span class="node__k">02</span><span class="node__n">MEMO-BAND 健康手环</span><span class="node__d">ESP32-C3 · MAX30102 · MAX30205 · MPU6050</span>
+          <span class="node__wire">HTTP POST 发送 JSON</span>
+        </button>
+        <button class="node node--backend" role="tab" id="t-backend" aria-controls="p-backend" aria-selected="false" tabindex="-1" data-node="backend">
+          <span class="node__k">03</span><span class="node__n">后端服务器</span><span class="node__d">Python · Flask · OpenCV</span>
+        </button>
+        <button class="node node--app" role="tab" id="t-app" aria-controls="p-app" aria-selected="false" tabindex="-1" data-node="app">
+          <span class="node__k">04</span><span class="node__n">家属端 App</span><span class="node__d">React · TypeScript · Capacitor</span>
+          <span class="node__wire">REST API · MJPEG</span>
+        </button>
+      </div>
+
+      <div class="sysmap__panels">
+        <!-- glasses -->
+        <div class="panel" id="p-glasses" role="tabpanel" aria-labelledby="t-glasses">
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title">AR 智能眼镜</h4>
+              <dl class="kv">
+                <dt>主控板</dt><dd>Seeed XIAO ESP32-S3 Sense（带摄像头）</dd>
+                <dt>显示屏</dt><dd>128×32 OLED，SSD1306，I2C 接口</dd>
+                <dt>光学</dt><dd>一面反射镜和一块透明玻璃</dd>
+                <dt>外壳</dt><dd>3D 打印，自主设计</dd>
+              </dl>
+              <p><strong>AR 显示原理。</strong>反射镜把 OLED 上的文字反射到透明玻璃上，患者就能在真实场景之上看到信息，类似简易的抬头显示（HUD）。</p>
+              <p><strong>人脸识别。</strong>摄像头通过 Wi-Fi 把图像发送到后端，由后端识别家人和朋友；眼镜随后显示对方的姓名和关系，帮助患者记起正在交谈的人是谁。</p>
+              <p><strong>房间识别。</strong>后端还能识别患者所在的房间（例如厨房），即视觉室内定位，项目中称为 vSLAM。</p>
+            </div>
+            <div class="optics">
+              <svg viewBox="0 0 320 220" class="optics__svg" role="img" aria-label="光路：OLED 文字经反射镜投射到眼前的透明玻璃上，与真实场景叠加">
+                <defs>
+                  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+                </defs>
+                <g class="optics__world">
+                  <path d="M20 150 H 170" marker-end="url(#arrow)"/>
+                  <path d="M20 175 H 170" marker-end="url(#arrow)"/>
+                  <text x="20" y="200">真实场景</text>
+                </g>
+                <rect class="optics__oled" x="160" y="22" width="70" height="18" rx="2"/>
+                <text class="optics__lbl" x="238" y="35">OLED</text>
+                <line class="optics__mirror" x1="178" y1="70" x2="222" y2="100"/>
+                <text class="optics__lbl" x="232" y="92">反射镜</text>
+                <line class="optics__glass" x1="190" y1="128" x2="212" y2="198"/>
+                <text class="optics__lbl" x="128" y="122">玻璃</text>
+                <path class="optics__ray" d="M195 40 V 82 L 202 162" marker-end="url(#arrow)"/>
+                <path class="optics__ray optics__ray--eye" d="M204 165 H 262" marker-end="url(#arrow)"/>
+                <circle class="optics__eye" cx="282" cy="165" r="14"/><circle cx="276" cy="165" r="5" class="optics__pupil"/>
+                <text class="optics__lbl" x="266" y="198">眼睛</text>
+              </svg>
+              <div class="oled" aria-label="眼镜显示内容示例">
+                <span class="oled__screen"><span class="oled__text" id="oledText">Youssef – Son</span><span class="oled__cursor"></span></span>
+                <span class="oled__cap mono">128 × 32 OLED · 示例输出</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- band -->
+        <div class="panel" id="p-band" role="tabpanel" aria-labelledby="t-band" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title">MEMO-BAND 智能健康手环</h4>
+              <dl class="kv">
+                <dt>主控板</dt><dd>Seeed XIAO ESP32-C3</dd>
+                <dt>心率 / 血氧</dt><dd>MAX30102</dd>
+                <dt>体温</dt><dd>MAX30205</dd>
+                <dt>运动</dt><dd>MPU6050 加速度计 + 陀螺仪</dd>
+                <dt>总线</dt><dd>所有传感器均接在 I2C 总线上，手工焊接</dd>
+                <dt>外壳</dt><dd>拆除一块商用智能手表的原有电路，把我的主控板和传感器装进表壳和表带；USB-C 用于烧录和供电</dd>
+              </dl>
+              <p><strong>固件。</strong>模块化 C++（Arduino），分为传感器、告警引擎、睡眠管理和 Wi-Fi 管理四个模块。</p>
+              <p><strong>功耗。</strong>深度睡眠循环：每 30 秒检测一次心率血氧，每 5 分钟测一次体温，并通过 MPU6050 中断实现运动唤醒。</p>
+              <p><strong>通信。</strong>通过 Wi-Fi 以 HTTP POST 向后端发送 JSON 数据。</p>
+            </div>
+            <div>
+              <p class="kicker">设备端告警引擎</p>
+              <table class="alerts">
+                <caption class="sr-only">手环检测的告警阈值</caption>
+                <tbody>
+                  <tr><th scope="row">跌倒</th><td>加速度 <b>&gt; 2.5 g</b></td></tr>
+                  <tr><th scope="row">心动过缓</th><td><b>&lt; 50</b> BPM</td></tr>
+                  <tr><th scope="row">心动过速</th><td><b>&gt; 120</b> BPM</td></tr>
+                  <tr><th scope="row">低血氧</th><td><b>&lt; 94</b> %</td></tr>
+                  <tr><th scope="row">发热</th><td><b>&gt; 37.8</b> °C</td></tr>
+                  <tr><th scope="row">低体温</th><td><b>&lt; 35</b> °C</td></tr>
+                  <tr><th scope="row">躁动</th><td>陀螺仪活动剧烈</td></tr>
+                  <tr class="crit"><th scope="row">危急</th><td>跌倒 <b>+</b> 心动过速同时发生</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- backend -->
+        <div class="panel" id="p-backend" role="tabpanel" aria-labelledby="t-backend" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title">后端服务器</h4>
+              <p><strong>技术栈。</strong>Python + Flask + OpenCV。</p>
+              <p><strong>人脸识别。</strong>Haar Cascade 检测、LBPH 识别，并通过数据增强提升准确率；提供人脸注册、识别、列表和删除接口。</p>
+              <p><strong>房间识别。</strong>MobileNetV2（ONNX）提取图像特征，再由基于各房间照片训练的 SVM 分类器（scikit-learn）判断房间；YOLOv4-tiny 用于目标检测。</p>
+              <p><strong>其他。</strong>提供眼镜摄像头的 MJPEG 实时视频流；接收手环数据，并通过 REST API 提供给 App。</p>
+            </div>
+            <div class="pipe" aria-label="识别流程">
+              <div class="pipe__row"><span>摄像头画面</span><i></i><span>Haar Cascade</span><i></i><span>LBPH</span><i></i><span class="pipe__out">姓名 + 关系</span></div>
+              <div class="pipe__row"><span>摄像头画面</span><i></i><span>MobileNetV2 · ONNX</span><i></i><span>SVM</span><i></i><span class="pipe__out">房间</span></div>
+              <div class="pipe__row"><span>手环 JSON</span><i></i><span>Flask</span><i></i><span>REST API</span><i></i><span class="pipe__out">App</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- app -->
+        <div class="panel" id="p-app" role="tabpanel" aria-labelledby="t-app" hidden>
+          <div class="panel__grid">
+            <div>
+              <h4 class="panel__title">家属端手机 App</h4>
+              <p><strong>技术栈。</strong>React、TypeScript 和 Tailwind CSS，通过 Capacitor 打包为 Android / iOS 应用。</p>
+              <ul class="ticks">
+                <li><b>实时看板：</b>心率、血氧、体温、活动状态、患者当前所在房间，以及两台设备的电量。</li>
+                <li><b>实时告警：</b>跌倒、生命体征异常、离开安全区、低电量，支持严重程度分级和确认。</li>
+                <li><b>安全区：</b>地图上半径可调的电子围栏。</li>
+                <li><b>历史记录：</b>心率、活动和跌倒的图表。</li>
+                <li><b>家庭成员：</b>管理眼镜需要识别的人脸。</li>
+                <li><b>患者档案：</b>紧急联系人和病历备注。</li>
+              </ul>
+            </div>
+            <div class="phones" aria-hidden="true">
+              <img src="../assets/img/app-vitals-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="">
+              <img src="../assets/img/app-alerts-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="gallery" aria-labelledby="mb-gal">
+      <div class="gallery__head reveal">
+        <h3 class="block__title" id="mb-gal"><span class="zh">作品图集</span><span class="kicker">MEMO-BAND</span></h3>
+        <div class="filters" role="group" aria-label="筛选图集">
+          <button class="chip is-on" data-filter="all" aria-pressed="true">全部</button>
+          <button class="chip" data-filter="glasses" aria-pressed="false">AR 眼镜</button>
+          <button class="chip" data-filter="band" aria-pressed="false">手环</button>
+          <button class="chip" data-filter="backend" aria-pressed="false">后端</button>
+          <button class="chip" data-filter="app" aria-pressed="false">家属端 App</button>
+        </div>
+      </div>
+      <ul class="gal" id="gal">
+        <li class="gal__item gal__item--tall reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="../assets/img/glasses-hand-1200.webp" data-caption="AR 眼镜原型：XIAO ESP32-S3 Sense、OLED 和光学组件装在 3D 打印外壳中">
+            <img src="../assets/img/glasses-hand-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="手持 AR 眼镜原型，3D 打印外壳内的 OLED 已点亮">
+            <span class="gal__cap"><b>AR 眼镜</b> 原型实拍</span>
+          </button>
+        </li>
+        <li class="gal__item reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="../assets/img/glasses-open-372.webp" data-caption="打开的外壳：OLED、反射镜和透明玻璃">
+            <img src="../assets/img/glasses-open-372.webp" width="372" height="327" loading="lazy" decoding="async" alt="打开的 AR 眼镜外壳，可见 OLED、反射镜和透明玻璃">
+            <span class="gal__cap"><b>AR 眼镜</b> 光学结构：OLED、反射镜、玻璃</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="glasses">
+          <button class="zoomable" type="button" data-full="../assets/img/glasses-side-940.webp" data-caption="带摄像头的眼镜侧视图">
+            <img src="../assets/img/glasses-side-600.webp" width="600" height="1226" loading="lazy" decoding="async" alt="AR 眼镜侧面，可见摄像头">
+            <span class="gal__cap"><b>AR 眼镜</b> 摄像头一侧</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="../assets/img/band-worn-1200.webp" data-caption="佩戴在手腕上的 MEMO-BAND">
+            <img src="../assets/img/band-worn-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="佩戴在手腕上的 MEMO-BAND 手环">
+            <span class="gal__cap"><b>MEMO-BAND</b> 佩戴效果</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="../assets/img/band-internals-1200.webp" data-caption="手工焊接的 I2C 传感器板装入改造的智能手表表带">
+            <img src="../assets/img/band-internals-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="打开的手环，可见智能手表表带内手工焊接的传感器板和走线">
+            <span class="gal__cap"><b>MEMO-BAND</b> 内部手工焊接的传感器</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--tall reveal" data-cat="band">
+          <button class="zoomable" type="button" data-full="../assets/img/band-usbc-1200.webp" data-caption="ESP32-C3 的 USB-C 接口，用于烧录和供电">
+            <img src="../assets/img/band-usbc-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="可见 ESP32-C3 USB-C 接口的手环">
+            <span class="gal__cap"><b>MEMO-BAND</b> USB-C 烧录与供电</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--diagram reveal" data-cat="backend">
+          <div class="bk">
+            <p class="kicker">后端 · Flask + OpenCV</p>
+            <ul class="bk__list">
+              <li><span class="bk__ep">POST</span> 注册人脸</li>
+              <li><span class="bk__ep">POST</span> 识别人脸</li>
+              <li><span class="bk__ep">GET</span> 人脸列表</li>
+              <li><span class="bk__ep">DEL</span> 删除人脸</li>
+              <li><span class="bk__ep">MJPEG</span> 眼镜摄像头实时画面</li>
+              <li><span class="bk__ep">REST</span> 手环数据 → App</li>
+            </ul>
+            <p class="bk__model">Haar + LBPH · MobileNetV2 (ONNX) + SVM · YOLOv4-tiny</p>
+          </div>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app backend">
+          <button class="zoomable" type="button" data-full="../assets/img/app-location-720.webp" data-caption="App 中显示的后端房间识别结果（当前位置：厨房），以及两台设备的电量">
+            <img src="../assets/img/app-location-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App 界面：当前房间识别为厨房，并显示设备电量">
+            <span class="gal__cap"><b>房间识别</b> App 中的结果</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app">
+          <button class="zoomable" type="button" data-full="../assets/img/app-vitals-720.webp" data-caption="实时看板：心率、血氧、体温、活动状态，以及来自手环的低体温告警">
+            <img src="../assets/img/app-vitals-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App 看板：心率、血氧、体温和低体温告警">
+            <span class="gal__cap"><b>家属端 App</b> 实时体征</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app">
+          <button class="zoomable" type="button" data-full="../assets/img/app-alerts-720.webp" data-caption="带严重程度和确认功能的告警">
+            <img src="../assets/img/app-alerts-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App 告警界面，列出体温告警及确认按钮">
+            <span class="gal__cap"><b>家属端 App</b> 告警</span>
+          </button>
+        </li>
+        <li class="gal__item gal__item--phone reveal" data-cat="app backend">
+          <button class="zoomable" type="button" data-full="../assets/img/app-family-720.webp" data-caption="家庭成员：管理眼镜需要识别的人脸">
+            <img src="../assets/img/app-family-400.webp" width="400" height="867" loading="lazy" decoding="async" alt="App 界面：已识别的家人人脸列表">
+            <span class="gal__cap"><b>家属端 App</b> 已识别人脸</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="outcome reveal" aria-labelledby="mb-result">
+      <h3 class="block__title" id="mb-result"><span class="zh">成果</span></h3>
+      <p class="big">眼镜和手环均已完成可运行原型，并与后端和家属端 App 联调运行。项目始于学术原型，目前正在发展为<strong>创业产品</strong>。</p>
+      <ul class="tags">
+        <li>ESP32-S3</li><li>ESP32-C3</li><li>C++ (Arduino)</li><li>I2C</li><li>MAX30102</li><li>MAX30205</li><li>MPU6050</li><li>SSD1306 OLED</li><li>Python</li><li>Flask</li><li>OpenCV</li><li>LBPH</li><li>MobileNetV2 · ONNX</li><li>scikit-learn</li><li>YOLOv4-tiny</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Capacitor</li><li>3D 打印</li>
+      </ul>
+    </section>
+  </div>
+</article>
+
+<!-- ============ PROJECT 03 · AXIS ============ -->
+<article class="project" id="axis" style="--pa: var(--c-cyan); --pa-soft: var(--c-cyan-soft)" aria-labelledby="ax-title">
+  <div class="wrap">
+    <header class="p-head">
+      <div class="p-head__num reveal" aria-hidden="true">03</div>
+      <div class="p-head__titles">
+        <p class="kicker reveal">项目 03 · Sagemcom 实习 · 2026 年夏</p>
+        <h2 class="p-title zh reveal" id="ax-title"><span class="nw">工业视觉检测</span><span class="nw">与监控系统</span></h2>
+        <p class="p-name reveal">AXIS</p>
+        <p class="p-sub reveal">PCB 检测工位的实时监控系统，以及一个能发现产线工业传感器漏检缺陷的深度学习检测器。</p>
+        <ul class="meta reveal">
+          <li class="award">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            独立开发
+          </li>
+          <li>2 个月</li>
+          <li>向测试开发部门提交 17 页技术报告</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ax-problem">
+        <h3 class="block__title" id="ax-problem"><span class="zh">问题</span></h3>
+        <p class="big">电路板上的金属屏蔽罩不仅要放上去，还必须<strong>压平贴合</strong>。边缘翘起 1–3 mm 就会泄漏电磁辐射，使电路板不合格。</p>
+        <p>产线上的康耐视 Cognex Checker 4G7 只通过硬接线开关量输出结果：没有历史记录、没有时间戳、不保存图像、无法追溯，也不给出原因，只有“合格 / 不合格”。</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ax-states">
+        <h3 class="block__title" id="ax-states"><span class="zh">三种状态</span></h3>
+        <table class="states">
+          <thead><tr><th scope="col">状态</th><th scope="col">表现</th><th scope="col">判定</th></tr></thead>
+          <tbody>
+            <tr><td><span class="pill pill--ok">合格</span></td><td>屏蔽罩已放置并压平</td><td>接收</td></tr>
+            <tr><td><span class="pill pill--warn">未压到位</span></td><td>位置正确，但一边翘起 1–3 mm</td><td>拒收</td></tr>
+            <tr><td><span class="pill pill--bad">缺失</span></td><td>屏蔽罩区域上什么都没有</td><td>拒收</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- part 1 : supervision chain -->
+    <section class="chain-wrap reveal" aria-labelledby="ax-sup">
+      <h3 class="block__title" id="ax-sup"><span class="zh">第一部分 · 实时监控</span><span class="kicker">已在真实设备上验证</span></h3>
+      <ol class="chain">
+        <li><b>Cognex Checker 4G7</b><span>2 个检测传感器 + 梯形图逻辑 → 输出 D0 / D1</span></li>
+        <li><b>Siemens S7-1200</b><span>接入 I1.0 / I1.2，复制到 DB1（TIA Portal V17）</span></li>
+        <li><b>Snap7 · 500 ms</b><span>Python 通过 S7comm 读取一个状态字节</span></li>
+        <li><b>FastAPI</b><span>每块板在 SQLite 中记录一行，FTP 服务器接收图像</span></li>
+        <li><b>WebSocket</b><span>把每次状态变化推送到浏览器</span></li>
+        <li><b>监控看板</b><span>操作员 / 管理员两种角色，bcrypt + 签名会话 Cookie</span></li>
+      </ol>
+      <p class="chain__note">数据源封装在统一接口之后，只需一个配置项即可切换（<code>mock</code> · <code>real</code> · <code>vision</code>）。后来检测从 Cognex 传感器换成网络摄像头时，看板、存储和实时传输的代码一行都不用改。</p>
+
+      <div class="shots">
+        <div class="toggle-shot" id="passFail">
+          <div class="toggle-shot__bar">
+            <div class="seg seg--sm" role="tablist" aria-label="看板判定">
+              <span class="seg__thumb" aria-hidden="true"></span>
+              <button role="tab" aria-selected="true" data-shot="pass">PASS</button>
+              <button role="tab" aria-selected="false" tabindex="-1" data-shot="fail">FAIL</button>
+            </div>
+            <span class="mono dim">实时控制台 · 经 FTP 获取的真实 Cognex 图像</span>
+          </div>
+          <div class="toggle-shot__frame">
+            <img data-shot="pass" class="is-on" src="../assets/img/axis-pass-800.webp" srcset="../assets/img/axis-pass-800.webp 800w, ../assets/img/axis-pass-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="733" loading="lazy" decoding="async" alt="AXIS 控制台显示 PASS 判定、检测图像、产量计数和合格率">
+            <img data-shot="fail" src="../assets/img/axis-fail-800.webp" srcset="../assets/img/axis-fail-800.webp 800w, ../assets/img/axis-fail-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="733" loading="lazy" decoding="async" alt="AXIS 控制台显示 FAIL 判定">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- discovery -->
+    <section class="discover reveal" aria-labelledby="ax-disc">
+      <h3 class="block__title" id="ax-disc"><span class="zh">关键发现</span><span class="kicker">从上方看不见的缺陷</span></h3>
+      <p class="big">在真实电路板上运行后，真正的问题暴露了：<strong>Cognex 传感器只能发现屏蔽罩缺失。</strong>放上了但没有压平的屏蔽罩会被判为合格。</p>
+      <div class="geo" id="geo" data-state="ok">
+        <div class="seg" role="tablist" aria-label="屏蔽罩状态">
+          <span class="seg__thumb" aria-hidden="true"></span>
+          <button role="tab" aria-selected="true" data-geo="ok">已压平</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="missing">缺失</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="tilt">未压到位（倾斜）</button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-geo="lift">整体抬起</button>
+        </div>
+        <div class="geo__body">
+          <svg class="geo__svg" viewBox="0 0 520 260" role="img" aria-labelledby="geoDesc">
+            <title id="geoDesc">相机位于电路板上方的侧视图，以及它从上方拍到的画面</title>
+            <!-- camera -->
+            <g class="geo__cam"><rect x="150" y="10" width="60" height="26" rx="4"/><path d="M168 36h24l-4 10h-16z"/></g>
+            <text class="geo__lbl" x="218" y="28">相机（俯视）</text>
+            <!-- rays -->
+            <path class="geo__ray" d="M180 46 L 120 196"/>
+            <path class="geo__ray" d="M180 46 L 240 196"/>
+            <!-- board -->
+            <rect class="geo__board" x="40" y="200" width="290" height="14" rx="2"/>
+            <text class="geo__lbl" x="40" y="236">PCB</text>
+            <!-- shield states -->
+            <g class="geo__shield geo__shield--ok"><rect x="120" y="186" width="120" height="14" rx="1"/></g>
+            <g class="geo__shield geo__shield--lift"><rect x="120" y="178" width="120" height="14" rx="1"/><path class="geo__gap" d="M120 196h120"/></g>
+            <g class="geo__shield geo__shield--tilt"><path d="M120 200 L 240 186 L 240 172 L 120 186 Z"/></g>
+            <g class="geo__shield geo__shield--missing"><rect x="120" y="196" width="120" height="4" class="geo__pad"/></g>
+            <!-- specular reflection -->
+            <path class="geo__refl geo__refl--back" d="M180 186 L 180 52"/>
+            <path class="geo__refl geo__refl--away" d="M180 179 L 268 70"/>
+            <!-- top view -->
+            <text class="geo__lbl" x="372" y="28">拍到的画面</text>
+            <rect class="geo__top-board" x="372" y="44" width="128" height="170" rx="4"/>
+            <rect class="geo__top-shield" x="396" y="80" width="80" height="98" rx="2"/>
+          </svg>
+          <dl class="geo__verdicts" aria-live="polite">
+            <div><dt>俯视图像</dt><dd id="geoSeen">明亮的镜面反光屏蔽罩</dd></div>
+            <div><dt>Cognex Checker</dt><dd id="geoCognex" class="v-ok">合格</dd></div>
+            <div><dt>AXIS 模型</dt><dd id="geoAxis" class="v-ok">合格</dd></div>
+            <p class="geo__why" id="geoWhy">基准情况：屏蔽罩已放置并压平。</p>
+          </dl>
+        </div>
+      </div>
+      <p class="discover__note">这是通过测量证明的，而不是调参问题：在 150 mm 工作距离下，1.5 mm 的抬起只带来约 1% 的尺度变化，在 376 像素宽的图像上不到 2 个像素。但边缘倾斜会让镜面反射偏离镜头，该区域随之变暗。这一信号存在于像素之中，而 Checker 只提供区域阈值、无法访问像素。<strong>解决办法是换相机，而不是调参数。</strong></p>
+      <figure class="cognex">
+        <button class="zoomable" type="button" data-full="../assets/img/axis-cognex-1270.webp" data-caption="Cognex Checker 4G7 配置：屏蔽罩区域上的 Area Pattern 传感器">
+          <img src="../assets/img/axis-cognex-800.webp" srcset="../assets/img/axis-cognex-800.webp 800w, ../assets/img/axis-cognex-1270.webp 1270w" sizes="(max-width: 960px) 92vw, 560px" width="1270" height="926" loading="lazy" decoding="async" alt="Cognex Checker 软件，Area Pattern 传感器放置在屏蔽罩区域上">
+        </button>
+        <figcaption>改造前：我首先完成了 Cognex Checker 4G7 的配置，包括 Brightness + Area Pattern 传感器和梯形图逻辑。</figcaption>
+      </figure>
+    </section>
+
+    <!-- part 2 : vision -->
+    <section class="vision" aria-labelledby="ax-vis">
+      <h3 class="block__title reveal" id="ax-vis"><span class="zh">第二部分 · 视觉重建</span><span class="kicker">用 Python 重建检测</span></h3>
+      <ol class="steps reveal">
+        <li><b>USB 网络摄像头</b><span>Microsoft LifeCam HD-3000，720p：可完全访问像素</span></li>
+        <li><b>电路板归一化</b><span>绿色 PCB 掩膜 → 形态学处理 → 最小外接矩形 → 单应变换到 1100 × 592 标准视图，并设有防止误检绿色区域的保护条件</span></li>
+        <li><b>ResNet-18</b><span>预训练模型，仅微调最后一个残差块和输出层；300 张真实图像（每类 100 张，4 次采集）</span></li>
+        <li><b>带原因的判定</b><span>合格 / 未压到位 / 缺失写入数据库、WebSocket 和界面，不再只是布尔值</span></li>
+        <li><b>允许拒判</b><span>置信度 &lt; 0.55 或亮度超出训练范围 72–99 → 判为“不确定”，不写入记录</span></li>
+      </ol>
+
+      <div class="classifier reveal" id="classifier">
+        <div class="classifier__bar">
+          <div class="seg seg--sm" role="tablist" aria-label="分类器输出">
+            <span class="seg__thumb" aria-hidden="true"></span>
+            <button role="tab" aria-selected="true" data-cls="ok">合格</button>
+            <button role="tab" aria-selected="false" tabindex="-1" data-cls="loose">未压到位</button>
+            <button role="tab" aria-selected="false" tabindex="-1" data-cls="missing">缺失</button>
+          </div>
+          <span class="mono dim">左：画面中定位到的电路板 · 右：矫正视图、ROI 与各类概率</span>
+        </div>
+        <div class="classifier__frame">
+          <img data-cls="ok" class="is-on" src="../assets/img/axis-ok-800.webp" srcset="../assets/img/axis-ok-800.webp 800w, ../assets/img/axis-ok-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="检测输出：合格，概率 0.96">
+          <img data-cls="loose" src="../assets/img/axis-loose-800.webp" srcset="../assets/img/axis-loose-800.webp 800w, ../assets/img/axis-loose-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="检测输出：未压到位，概率 1.00">
+          <img data-cls="missing" src="../assets/img/axis-missing-800.webp" srcset="../assets/img/axis-missing-800.webp 800w, ../assets/img/axis-missing-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="830" loading="lazy" decoding="async" alt="检测输出：缺失，概率 1.00">
+          <span class="classifier__p" id="clsP">p = 0.96</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="ax-res">
+      <h3 class="block__title reveal" id="ax-res"><span class="zh">实验结果</span><span class="kicker">留出一整次采集作为测试集</span></h3>
+      <ul class="kpis kpis--4">
+        <li class="reveal"><b><span data-count="93">93</span>%</b><span>留出测试集上的整体准确率</span></li>
+        <li class="reveal"><b><span data-count="100">100</span>%</b><span>屏蔽罩缺失识别率</span></li>
+        <li class="reveal"><b><span data-count="82">82</span>%</b><span>未压到位识别率（Cognex 漏检的缺陷）</span></li>
+        <li class="reveal"><b><span data-count="7">7</span> ms</b><span>每张图像耗时</span></li>
+      </ul>
+      <div class="table-wrap reveal">
+        <table class="cmp">
+          <caption>各类准确率（留出测试集）</caption>
+          <thead><tr><th scope="col">方法</th><th scope="col">合格</th><th scope="col">缺失</th><th scope="col">未压到位</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">像素 + 最近质心</th><td>88%</td><td>98%</td><td>72%</td></tr>
+            <tr><th scope="row">ResNet-18 冻结 + 线性层</th><td>96%</td><td>100%</td><td>76%</td></tr>
+            <tr class="best"><th scope="row">ResNet-18，微调最后一个残差块</th><td>97%</td><td>100%</td><td>82%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="wide reveal">
+        <button class="zoomable" type="button" data-full="../assets/img/axis-shield-1600.webp" data-caption="视觉模式下的控制台：实时屏蔽罩检测、结果流和按原因统计的诊断计数">
+          <img src="../assets/img/axis-shield-800.webp" srcset="../assets/img/axis-shield-800.webp 800w, ../assets/img/axis-shield-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 1100px" width="1600" height="668" loading="lazy" decoding="async" alt="视觉模式下的 AXIS 控制台：电路板实时画面、结果流和按原因统计的屏蔽罩诊断">
+        </button>
+        <figcaption>视觉模式下的控制台：屏蔽罩诊断面板按原因（合格 / 未压到位 / 缺失）统计电路板数量，这是原系统无法提供的。</figcaption>
+      </figure>
+    </section>
+
+    <div class="p-grid">
+      <section class="block reveal" aria-labelledby="ax-limits">
+        <h3 class="block__title" id="ax-limits"><span class="zh">已知局限</span><span class="kicker">均经实测</span></h3>
+        <p>主要弱点是<strong>绝对光照</strong>：不同采集之间的漂移（19.2 个灰度级）和电路板在视野中的移动（18.5）对信号的影响都大于缺陷本身（15.3）。四次采集都来自同一个上午，因此分数偏乐观。在加入漫射照明和相对光度输入之前，由光照保护条件检测这种情况并暂停判定。</p>
+      </section>
+      <section class="block reveal" aria-labelledby="ax-tech">
+        <h3 class="block__title" id="ax-tech"><span class="zh">技术栈</span></h3>
+        <ul class="tags">
+          <li>Python</li><li>PyTorch</li><li>ResNet-18</li><li>OpenCV</li><li>FastAPI</li><li>WebSocket</li><li>SQLAlchemy</li><li>SQLite</li><li>Siemens S7-1200</li><li>TIA Portal V17</li><li>python-snap7</li><li>pyftpdlib</li><li>Cognex Checker 4G7</li><li>bcrypt</li><li>Vanilla JS</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EXPERIENCE + EDUCATION ============ -->
+<section class="cv" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      
+      <h2 class="sec-title zh" id="exp-title">实习与工作经历</h2>
+    </header>
+    <ol class="timeline">
+      <li class="reveal">
+        <p class="tl__when">2026 年夏 · 2 个月</p>
+        <div><h3>Sagemcom（突尼斯）<span>工业视觉与自动化工程实习生</span></h3>
+        <p>独立开发 AXIS 工业视觉检测与监控系统，用于 PCB 装配线，并向测试开发部门提交 17 页技术报告。</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2025 – 至今</p>
+        <div><h3>GoMyCode（突尼斯）<span>Python 与生成式 AI 兼职讲师</span></h3>
+        <p>通过现场编程讲授 Python 与生成式 AI，指导每期学员独立完成结业项目。</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2025 年夏 · 1 个月</p>
+        <div><h3>Sagemcom（突尼斯）<span>自动化与机器人研发实习生</span></h3>
+        <p>为越疆 Dobot M1 Pro SCARA 机械臂开发并验证运动程序，涵盖运动编程、末端工具控制及生产级自动化规范。</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2025 – 2026</p>
+        <div><h3>IEEE ENSIT 学生分会 <span>财务主管 · 志愿者</span></h3>
+        <p>负责分会预算、支出管控与财务报告，并洽谈企业赞助合同。</p></div>
+      </li>
+    </ol>
+
+    <header class="sec-head sec-head--sub reveal">
+      
+      <h2 class="sec-title sec-title--sm zh">教育背景</h2>
+    </header>
+    <ol class="timeline timeline--edu">
+      <li class="reveal">
+        <p class="tl__when">2026.09 – 2027.09</p>
+        <div><h3>常州机电职业技术学院</h3>
+        <p>汉语 + 新能源汽车技术 · 一年制学术交流项目，替代 ENSIT 工程师学位最后一学年。</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2024 – 2027（预计）</p>
+        <div><h3>突尼斯国立高等工程师学院（ENSIT）</h3>
+        <p>电气工程 · 国家工程师文凭（相当于硕士学位）。</p></div>
+      </li>
+      <li class="reveal">
+        <p class="tl__when">2022 – 2024</p>
+        <div><h3>纳布勒工程预科学院（IPEIN）</h3>
+        <p>工程师预科 · 物理与技术科学方向。</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills" id="skills" aria-labelledby="sk-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      
+      <h2 class="sec-title zh" id="sk-title">专业技能</h2>
+    </header>
+    <div class="skills__grid">
+      <div class="skill card glow reveal"><h3>嵌入式与物联网</h3><p>STM32 裸机开发、ESP32、I2C 传感器、MQTT、WebSockets、低功耗设计</p></div>
+      <div class="skill card glow reveal"><h3>人工智能与视觉</h3><p>PyTorch、OpenCV、YOLO、ResNet / MobileNet 迁移学习、scikit-learn</p></div>
+      <div class="skill card glow reveal"><h3>工业自动化</h3><p>西门子 S7-1200、博途 TIA Portal、Snap7、PROFINET、康耐视视觉、SCARA 机器人</p></div>
+      <div class="skill card glow reveal"><h3>编程语言</h3><p>Python、C / C++、JavaScript / TypeScript、MATLAB</p></div>
+      <div class="skill card glow reveal"><h3>软件与工具</h3><p>FastAPI、Flask、Node.js、React、SQL、Git</p></div>
+      <div class="skill card glow reveal"><h3>语言能力</h3><p>阿拉伯语（母语）· 法语（流利）· 英语（流利）· 德语（A2）· 汉语（初级，备考 HSK 1）</p></div>
+    </div>
+    <p class="certs reveal"><span class="kicker">证书</span> Coursera / DeepLearning.AI（2025）：监督式机器学习：回归与分类；高级学习算法。MATLAB Onramp（2025）。</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="ct-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      
+      <h2 class="sec-title zh" id="ct-title">联系方式</h2>
+    </header>
+    <p class="contact__lede reveal">求职意向：<strong>新能源汽车技术、计算机视觉、嵌入式系统或人工智能</strong>方向的实习。现居江苏省常州市。</p>
+    <ul class="contact__list">
+      <li class="reveal">
+        <span class="kicker">邮箱</span>
+        <a class="contact__big" href="mailto:youssefbenmbarek123@gmail.com">youssefbenmbarek123@gmail.com</a>
+      </li>
+      <li class="reveal">
+        <span class="kicker">微信</span>
+        <span class="contact__row">
+          <span class="contact__big mono-big" id="wechatId">wxid_ogty82qpu8q612</span>
+          <button class="chip" type="button" id="copyWechat" data-copy="wxid_ogty82qpu8q612">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>复制</span>
+          </button>
+        </span>
+      </li>
+      <li class="reveal">
+        <span class="kicker">现居住地</span>
+        <span class="contact__big">江苏省常州市</span>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span class="zh foot__cn">贝苏宇</span>
+    <span>© 2026 Youssef Ben Mbarek</span>
+    <a href="#top">返回顶部 ↑</a>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<dialog class="lightbox" id="lightbox" aria-label="图片查看器">
+  <figure>
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__close icon-btn" type="button" id="lbClose" aria-label="关闭">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__prev icon-btn" type="button" id="lbPrev" aria-label="上一张">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__next icon-btn" type="button" id="lbNext" aria-label="下一张">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</dialog>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
