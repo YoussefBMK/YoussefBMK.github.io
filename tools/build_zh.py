@@ -458,6 +458,7 @@ PAIRS = [
     ('Looking for an internship in <strong>New Energy Vehicle Technology, Computer Vision, Embedded Systems or AI</strong>. Based in Changzhou, Jiangsu, China.',
      '求职意向：<strong>新能源汽车技术、计算机视觉、嵌入式系统或人工智能</strong>方向的实习。现居江苏省常州市。'),
     ('<span class="kicker">Email</span>', '<span class="kicker">邮箱</span>'),
+    ('<span class="kicker">Phone</span>', '<span class="kicker">电话</span>'),
     ('<span class="kicker"><span class="zh">微信</span> WeChat</span>', '<span class="kicker">微信</span>'),
     ('<span>Copy</span>', '<span>复制</span>'),
     ('<span class="kicker"><span class="zh">现居住地</span> Location</span>', '<span class="kicker">现居住地</span>'),
